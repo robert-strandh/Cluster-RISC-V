@@ -61,3 +61,11 @@
 (defparameter *t6* *x31*)
 
 (defparameter *temporary-6* *x31*)
+
+(defparameter *s0* *x8*)
+
+(defparameter *saved-register-0* *x8*)
+
+(defparameter *fp* *x8*)
+
+(defparameter *frame-pointer-0* *x8*)

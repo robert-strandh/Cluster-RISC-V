@@ -5,4 +5,5 @@
   :serial t
   :components
   ((:file "packages")
-   (:file "registers")))
+   (:file "registers")
+   (:file "instructions")))

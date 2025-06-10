@@ -33,3 +33,31 @@
 (defparameter *tp* *x4*)
 
 (defparameter *thread-pointer* *x4*)
+
+(defparameter *t0* *x5*)
+
+(defparameter *temporary-0* *x5*)
+
+(defparameter *t1* *x6*)
+
+(defparameter *temporary-1* *x6*)
+
+(defparameter *t2* *x7*)
+
+(defparameter *temporary-2* *x7*)
+
+(defparameter *t3* *x28*)
+
+(defparameter *temporary-3* *x28*)
+
+(defparameter *t4* *x29*)
+
+(defparameter *temporary-4* *x29*)
+
+(defparameter *t5* *x30*)
+
+(defparameter *temporary-5* *x30*)
+
+(defparameter *t6* *x31*)
+
+(defparameter *temporary-6* *x31*)

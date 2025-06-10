@@ -26,3 +26,10 @@
 
 (defparameter *stack-pointer* *x2*)
 
+(defparameter *gp* *x3*)
+
+(defparameter *global-pointer* *x3*)
+
+(defparameter *tp* *x4*)
+
+(defparameter *thread-pointer* *x4*)

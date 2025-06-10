@@ -6,4 +6,5 @@
   :components
   ((:file "packages")
    (:file "registers")
-   (:file "instructions")))
+   (:file "instructions")
+   (:file "register-instruction")))

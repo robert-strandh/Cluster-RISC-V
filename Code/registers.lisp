@@ -69,3 +69,47 @@
 (defparameter *fp* *x8*)
 
 (defparameter *frame-pointer-0* *x8*)
+
+(defparameter *s1* *x9*)
+
+(defparameter *saved-register-1* *x9*)
+
+(defparameter *s2* *x18*)
+
+(defparameter *saved-register-2* *x18*)
+
+(defparameter *s3* *x19*)
+
+(defparameter *saved-register-3* *x19*)
+
+(defparameter *s4* *x20*)
+
+(defparameter *saved-register-4* *x20*)
+
+(defparameter *s5* *x21*)
+
+(defparameter *saved-register-5* *x21*)
+
+(defparameter *s6* *x22*)
+
+(defparameter *saved-register-6* *x22*)
+
+(defparameter *s7* *x23*)
+
+(defparameter *saved-register-7* *x23*)
+
+(defparameter *s8* *x24*)
+
+(defparameter *saved-register-8* *x24*)
+
+(defparameter *s9* *x25*)
+
+(defparameter *saved-register-1* *x25*)
+
+(defparameter *s10* *x26*)
+
+(defparameter *saved-register-10* *x26*)
+
+(defparameter *s11* *x27*)
+
+(defparameter *saved-register-11* *x27*)

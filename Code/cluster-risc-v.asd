@@ -7,4 +7,5 @@
   ((:file "packages")
    (:file "registers")
    (:file "instructions")
-   (:file "register-instruction")))
+   (:file "register-instruction")
+   (:file "immediate-instruction")))

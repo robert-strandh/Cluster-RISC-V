@@ -7,3 +7,8 @@
    (%destination-register
     :initarg :destination-register
     :reader destination-register)))
+
+(defmethod initialize-instance :after
+    ((instruction upper-instruction)
+     &key immediate-value)
+  (check-type immediate-value (signed-byte 20)))

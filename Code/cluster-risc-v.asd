@@ -8,4 +8,5 @@
    (:file "registers")
    (:file "instructions")
    (:file "register-instruction")
-   (:file "immediate-instruction")))
+   (:file "immediate-instruction")
+   (:file "store-instruction")))

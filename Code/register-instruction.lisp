@@ -21,8 +21,6 @@
     ((instruction register-instruction)
      &key
        function-7
-       function-3
-       opcode)
+       function-3)
   (check-type function-7 (unsigned-byte 7))
-  (check-type function-3 (unsigned-byte 3))
-  (check-type opcode (unsigned-byte 7)))
+  (check-type function-3 (unsigned-byte 3)))

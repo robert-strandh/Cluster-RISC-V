@@ -18,8 +18,6 @@
     ((instruction immediate-instruction)
      &key
        immediate-value
-       function-3
-       opcode)
+       function-3)
   (check-type immediate-value (signed-byte 12))
-  (check-type function-3 (unsigned-byte 3))
-  (check-type opcode (unsigned-byte 7)))
+  (check-type function-3 (unsigned-byte 3)))

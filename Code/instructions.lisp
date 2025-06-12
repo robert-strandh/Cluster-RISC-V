@@ -1,6 +1,9 @@
 (cl:in-package #:cluster-risc-v)
 
-(defclass instruction () ())
+(defclass instruction ()
+  ((%opcode
+    :initarg :opcode
+    :reader opcode)))
 
 (defconstant +opcode-immediate+ #b0010011)
 

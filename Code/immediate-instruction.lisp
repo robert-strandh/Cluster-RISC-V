@@ -12,10 +12,7 @@
     :reader function-3)
    (%destination-register
     :initarg :destination-register
-    :reader destination-register)
-   (%opcode
-    :initarg :opcode
-    :reader opcode)))
+    :reader destination-register)))
 
 (defmethod initialize-instance :after
     ((instruction immediate-instruction)

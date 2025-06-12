@@ -14,9 +14,7 @@
     :reader source-register-2)
    (%function-3
     :initarg :function-3
-    :reader function-3)
-   (%opcode
-    :initform +opcode-store+)))
+    :reader function-3)))
 
 (defmethod initialize-instance :after
     ((instruction store-instruction)

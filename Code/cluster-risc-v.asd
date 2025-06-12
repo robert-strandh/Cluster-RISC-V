@@ -14,4 +14,5 @@
    (:file "load-instruction")
    (:file "store-instruction")
    (:file "upper-instruction")
-   (:file "load-upper-immediate-instruction")))
+   (:file "load-upper-immediate-instruction")
+   (:file "add-upper-immediate-to-pc-instruction")))

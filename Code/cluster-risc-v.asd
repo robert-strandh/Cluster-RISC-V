@@ -13,4 +13,5 @@
    (:file "integer-register-immediate-instruction")
    (:file "load-instruction")
    (:file "store-instruction")
-   (:file "upper-instruction")))
+   (:file "upper-instruction")
+   (:file "load-upper-immediate-instruction")))

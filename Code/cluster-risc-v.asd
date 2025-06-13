@@ -14,6 +14,7 @@
    (:file "shift-left-logical-instruction")
    (:file "shift-right-logical-instruction")
    (:file "shift-right-arithmetic-instruction")
+   (:file "set-less-than-instruction")
    (:file "immediate-instruction")
    (:file "integer-register-immediate-instruction")
    (:file "load-instruction")

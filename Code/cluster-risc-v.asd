@@ -9,6 +9,7 @@
    (:file "instructions")
    (:file "register-instruction")
    (:file "integer-register-register-instruction")
+   (:file "add-instruction")
    (:file "immediate-instruction")
    (:file "integer-register-immediate-instruction")
    (:file "load-instruction")

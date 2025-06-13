@@ -11,6 +11,7 @@
    (:file "integer-register-register-instruction")
    (:file "add-instruction")
    (:file "subtract-instruction")
+   (:file "shift-left-logical-instruction")
    (:file "immediate-instruction")
    (:file "integer-register-immediate-instruction")
    (:file "load-instruction")

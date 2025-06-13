@@ -12,6 +12,7 @@
    (:file "add-instruction")
    (:file "subtract-instruction")
    (:file "shift-left-logical-instruction")
+   (:file "shift-right-logical-instruction")
    (:file "immediate-instruction")
    (:file "integer-register-immediate-instruction")
    (:file "load-instruction")

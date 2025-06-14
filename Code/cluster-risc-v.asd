@@ -27,6 +27,7 @@
    (:file "and-immediate-instruction")
    (:file "or-immediate-instruction")
    (:file "xor-immediate-instruction")
+   (:file "shift-left-logical-immediate-instruction")
    (:file "load-instruction")
    (:file "store-instruction")
    (:file "upper-instruction")

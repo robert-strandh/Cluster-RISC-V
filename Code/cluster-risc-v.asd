@@ -16,6 +16,7 @@
    (:file "shift-right-arithmetic-instruction")
    (:file "set-less-than-instruction")
    (:file "set-less-than-unsigned-instruction")
+   (:file "and-instruction")
    (:file "immediate-instruction")
    (:file "integer-register-immediate-instruction")
    (:file "load-instruction")

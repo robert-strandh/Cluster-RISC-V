@@ -24,6 +24,7 @@
    (:file "add-immediate-instruction")
    (:file "set-less-than-immediate-instruction")
    (:file "set-less-than-unsigned-immediate-instruction")
+   (:file "and-immediate-instruction")
    (:file "load-instruction")
    (:file "store-instruction")
    (:file "upper-instruction")

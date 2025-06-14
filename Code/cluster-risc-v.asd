@@ -18,6 +18,7 @@
    (:file "set-less-than-unsigned-instruction")
    (:file "and-instruction")
    (:file "or-instruction")
+   (:file "xor-instruction")
    (:file "immediate-instruction")
    (:file "integer-register-immediate-instruction")
    (:file "load-instruction")

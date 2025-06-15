@@ -30,6 +30,7 @@
    (:file "shift-immediate-instruction")
    (:file "shift-left-logical-immediate-instruction")
    (:file "shift-right-logical-immediate-instruction")
+   (:file "shift-right-arithmetic-immediate-instruction")
    (:file "load-instruction")
    (:file "store-instruction")
    (:file "upper-instruction")

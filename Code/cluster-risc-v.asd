@@ -41,4 +41,5 @@
    (:file "branch-not-equal-instruction")
    (:file "branch-less-than-instruction")
    (:file "branch-greater-or-equal-instruction")
-   (:file "branch-less-than-unsigned-instruction")))
+   (:file "branch-less-than-unsigned-instruction")
+   (:file "branch-greater-or-equal-unsigned-instruction")))

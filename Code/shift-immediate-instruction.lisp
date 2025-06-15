@@ -7,4 +7,4 @@
 (defmethod initialize-instance :after
     ((instruction shift-immediate-instruction)
      &key shift-amount)
-  (check-type shift-ammount (unsigned-byte 6)))
+  (check-type shift-amount (unsigned-byte 6)))

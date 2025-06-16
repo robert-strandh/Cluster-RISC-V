@@ -7,4 +7,3 @@
   ()
   (:default-initargs
    :function-3 +shift-right-arithmetic-immediate-function-3+))
-

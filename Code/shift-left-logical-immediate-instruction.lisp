@@ -3,7 +3,7 @@
 (defconstant +shift-left-logical-immediate-function-3+ #b001)
 
 (defclass shift-left-logical-immediate-instruction
-    (shift-immediate-instruction)
+    (integer-register-shift-immediate-instruction)
   ()
   (:default-initargs :function-3 +shift-left-logical-immediate-function-3+))
 

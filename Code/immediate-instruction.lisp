@@ -1,10 +1,7 @@
 (cl:in-package #:cluster-risc-v)
 
 (defclass immediate-instruction (instruction)
-  ((%immediate-value
-    :initarg :immediate-value
-    :reader immediate-value)
-   (%source-register
+  ((%source-register
     :initarg :source-register
     :reader source-register)
    (%function-3
@@ -16,8 +13,5 @@
 
 (defmethod initialize-instance :after
     ((instruction immediate-instruction)
-     &key
-       immediate-value
-       function-3)
-  (check-type immediate-value (signed-byte 12))
+     &key function-3)
   (check-type function-3 (unsigned-byte 3)))

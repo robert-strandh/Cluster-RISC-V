@@ -43,4 +43,5 @@
    (:file "branch-greater-or-equal-instruction")
    (:file "branch-less-than-unsigned-instruction")
    (:file "branch-greater-or-equal-unsigned-instruction")
-   (:file "jump-and-link-instruction")))
+   (:file "jump-and-link-instruction")
+   (:file "jump-and-link-register-instruction")))

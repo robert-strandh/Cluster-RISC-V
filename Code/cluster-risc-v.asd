@@ -27,7 +27,7 @@
    (:file "and-immediate-instruction")
    (:file "or-immediate-instruction")
    (:file "xor-immediate-instruction")
-   (:file "shift-immediate-instruction")
+   (:file "integer-register-shift-immediate-instruction")
    (:file "shift-left-logical-immediate-instruction")
    (:file "shift-right-logical-immediate-instruction")
    (:file "shift-right-arithmetic-immediate-instruction")

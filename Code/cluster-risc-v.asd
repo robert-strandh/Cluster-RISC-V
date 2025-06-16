@@ -21,6 +21,7 @@
    (:file "xor-instruction")
    (:file "immediate-instruction")
    (:file "integer-register-immediate-instruction")
+   (:file "integer-register-non-shift-immediate-instruction")
    (:file "add-immediate-instruction")
    (:file "set-less-than-immediate-instruction")
    (:file "set-less-than-unsigned-immediate-instruction")

@@ -21,6 +21,7 @@
    (:file "or-instruction")
    (:file "xor-instruction")
    (:file "integer-register-register-word-instruction")
+   (:file "add-word-instruction")
    (:file "immediate-instruction")
    (:file "integer-register-immediate-instruction")
    (:file "integer-register-non-shift-immediate-instruction")

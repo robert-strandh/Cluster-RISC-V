@@ -7,7 +7,8 @@
 
 (defmethod initialize-instance :after
     ((instruction integer-register-shift-immediate-instruction)
-     &key shift-amount)
+     &key function-6 shift-amount)
+  (check-type function-6 (unsigned-byte 6))
   (check-type shift-amount (unsigned-byte 6)))
 
 (defmethod encode

@@ -4,7 +4,7 @@
 
 (defconstant +add-function-3+ #b000)
 
-(defclass add-instruction (integer-register-register-instruction)
+(defclass add-instruction (full-integer-register-register-instruction)
   ()
   (:default-initargs
    :function-7 +add-function-7+

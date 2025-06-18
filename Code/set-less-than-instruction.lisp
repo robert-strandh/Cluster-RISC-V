@@ -4,7 +4,8 @@
 
 (defconstant +set-less-than-function-3+ #b010)
 
-(defclass set-less-than-instruction (integer-register-register-instruction)
+(defclass set-less-than-instruction
+    (full-integer-register-register-instruction)
   ()
   (:default-initargs
    :function-7 +set-less-than-function-7+

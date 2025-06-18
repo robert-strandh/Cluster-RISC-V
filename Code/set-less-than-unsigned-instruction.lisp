@@ -5,7 +5,7 @@
 (defconstant +set-less-than-unsigned-function-3+ #b011)
 
 (defclass set-less-than-unsigned-instruction
-    (integer-register-register-instruction)
+    (full-integer-register-register-instruction)
   ()
   (:default-initargs
    :function-7 +set-less-than-unsigned-function-7+

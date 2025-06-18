@@ -4,7 +4,7 @@
 
 (defconstant +xor-function-3+ #b100)
 
-(defclass xor-instruction (integer-register-register-instruction)
+(defclass xor-instruction (full-integer-register-register-instruction)
   ()
   (:default-initargs
    :function-7 +xor-function-7+

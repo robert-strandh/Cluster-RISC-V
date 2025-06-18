@@ -4,7 +4,7 @@
 
 (defconstant +subtract-function-3+ #b000)
 
-(defclass subtract-instruction (integer-register-register-instruction)
+(defclass subtract-instruction (full-integer-register-register-instruction)
   ()
   (:default-initargs
    :function-7 +subtract-function-7+

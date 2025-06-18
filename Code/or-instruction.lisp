@@ -4,7 +4,7 @@
 
 (defconstant +or-function-3+ #b110)
 
-(defclass or-instruction (integer-register-register-instruction)
+(defclass or-instruction (full-integer-register-register-instruction)
   ()
   (:default-initargs
    :function-7 +or-function-7+

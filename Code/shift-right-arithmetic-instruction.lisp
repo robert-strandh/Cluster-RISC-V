@@ -5,7 +5,7 @@
 (defconstant +shift-right-arithmetic-function-3+ #b101)
 
 (defclass shift-right-arithmetic-instruction
-    (integer-register-register-instruction)
+    (full-integer-register-register-instruction)
   ()
   (:default-initargs
    :function-7 +shift-right-arithmetic-function-7+

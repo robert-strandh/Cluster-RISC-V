@@ -20,7 +20,7 @@
    (:file "and-instruction")
    (:file "or-instruction")
    (:file "xor-instruction")
-   (:file "integer-register-register-word-instruction")
+   (:file "half-integer-register-register-instruction")
    (:file "add-word-instruction")
    (:file "immediate-instruction")
    (:file "integer-register-immediate-instruction")

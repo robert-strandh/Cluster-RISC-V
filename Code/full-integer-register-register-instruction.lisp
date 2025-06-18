@@ -1,10 +1,10 @@
 (cl:in-package #:cluster-risc-v)
 
-(defconstant +integer-register-register-opcode+ #b0110011)
+(defconstant +full-integer-register-register-opcode+ #b0110011)
 
 (defclass full-integer-register-register-instruction (register-instruction)
   ()
-  (:default-initargs :opcode +integer-register-register-opcode+))
+  (:default-initargs :opcode +full-integer-register-register-opcode+))
 
 (defmethod encode ((instruction full-integer-register-register-instruction))
   (logior (ash (function-7 instruction) 25)

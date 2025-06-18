@@ -9,7 +9,7 @@
    (:file "instruction")
    (:file "encode")
    (:file "register-instruction")
-   (:file "integer-register-register-instruction")
+   (:file "full-integer-register-register-instruction")
    (:file "add-instruction")
    (:file "subtract-instruction")
    (:file "shift-left-logical-instruction")

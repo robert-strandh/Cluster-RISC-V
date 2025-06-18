@@ -10,6 +10,7 @@
    (:file "encode")
    (:file "register-instruction")
    (:file "integer-register-register-instruction")
+   (:file "integer-add-instruction-mixin")
    (:file "full-integer-register-register-instruction")
    (:file "add-instruction")
    (:file "subtract-instruction")

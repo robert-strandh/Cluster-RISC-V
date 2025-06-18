@@ -1,6 +1,6 @@
 (cl:in-package #:cluster-risc-v)
 
-(defclass add-word-instruction (integer-register-register-word-instruction)
+(defclass add-word-instruction (half-integer-register-register-instruction)
   ()
   (:default-initargs
    :function-7 +add-function-7+

@@ -1,11 +1,11 @@
 (cl:in-package #:cluster-risc-v)
 
-(defconstant +integer-subtract-function-7+ #b0100000)
+(defconstant +integer-register-register-subtract-function-7+ #b0100000)
 
-(defconstant +integer-subtract-function-3+ #b000)
+(defconstant +integer-register-register-subtract-function-3+ #b000)
 
-(defclass integer-subtract-instruction-mixin ()
+(defclass integer-register-register-subtract-instruction-mixin ()
   ()
   (:default-initargs
-   :function-7 +integer-subtract-function-7+
-   :function-3 +integer-subtract-function-3+))
+   :function-7 +integer-register-register-subtract-function-7+
+   :function-3 +integer-register-register-subtract-function-3+))

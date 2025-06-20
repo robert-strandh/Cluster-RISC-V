@@ -5,8 +5,6 @@
 (defconstant +set-less-than-function-3+ #b010)
 
 (defclass set-less-than-instruction
-    (full-integer-register-register-instruction)
-  ()
-  (:default-initargs
-   :function-7 +set-less-than-function-7+
-   :function-3 +set-less-than-function-3+))
+    (integer-register-register-set-less-than-instruction-mixin
+     full-integer-register-register-instruction)
+  ())

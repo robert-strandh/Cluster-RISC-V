@@ -16,6 +16,7 @@
    (:file "integer-register-register-shift-right-logical-instruction-mixin")
    (:file "integer-register-register-shift-right-arithmetic-instruction-mixin")
    (:file "integer-register-register-set-less-than-instruction-mixin")
+   (:file "integer-register-register-set-less-than-unsigned-instruction-mixin")
    (:file "full-integer-register-register-instruction")
    (:file "add-instruction")
    (:file "subtract-instruction")

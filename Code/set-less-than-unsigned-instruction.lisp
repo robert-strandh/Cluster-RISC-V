@@ -1,12 +1,6 @@
 (cl:in-package #:cluster-risc-v)
 
-(defconstant +set-less-than-unsigned-function-7+ #b0000000)
-
-(defconstant +set-less-than-unsigned-function-3+ #b011)
-
 (defclass set-less-than-unsigned-instruction
-    (full-integer-register-register-instruction)
-  ()
-  (:default-initargs
-   :function-7 +set-less-than-unsigned-function-7+
-   :function-3 +set-less-than-unsigned-function-3+))
+    (integer-register-register-set-less-than-unsigned-instruction-mixin
+     full-integer-register-register-instruction)
+  ())

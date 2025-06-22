@@ -34,6 +34,7 @@
    (:file "half-integer-register-register-shift-left-logical-instruction")
    (:file "half-integer-register-register-shift-right-logical-instruction")
    (:file "half-integer-register-register-shift-right-arithmetic-instruction")
+   (:file "half-integer-register-register-set-less-than-instruction")
    (:file "immediate-instruction")
    (:file "integer-register-immediate-instruction")
    (:file "integer-register-non-shift-immediate-instruction")

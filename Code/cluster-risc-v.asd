@@ -42,7 +42,7 @@
    (:file "addi-instruction")
    (:file "set-less-than-immediate-instruction")
    (:file "set-less-than-unsigned-immediate-instruction")
-   (:file "and-immediate-instruction")
+   (:file "andi-instruction")
    (:file "or-immediate-instruction")
    (:file "xor-immediate-instruction")
    (:file "integer-register-shift-immediate-instruction")

@@ -7,7 +7,7 @@
    #:add-instruction
    #:add-upper-immediate-to-pc-instruction
    #:add-word-instruction
-   #:and-immediate-instruction
+   #:andi-instruction
    #:and-instruction
    #:branch-equal-instruction
    #:branch-greater-or-equal-instruction

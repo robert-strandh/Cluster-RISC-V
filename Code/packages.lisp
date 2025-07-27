@@ -3,7 +3,7 @@
 (defpackage #:cluster-risc-v
   (:use #:common-lisp)
   (:export
-   #:add-immediate-instruction
+   #:addi-instruction
    #:add-instruction
    #:add-upper-immediate-to-pc-instruction
    #:add-word-instruction

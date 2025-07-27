@@ -1,9 +1,9 @@
 (cl:in-package #:cluster-risc-v)
 
-(defconstant +and-immediate-function-3+ #b111)
+(defconstant +andi-function-3+ #b111)
 
-(defclass and-immediate-instruction
+(defclass andi-instruction
     (integer-register-non-shift-immediate-instruction)
   ()
-  (:default-initargs :function-3 +and-immediate-function-3+))
+  (:default-initargs :function-3 +andi-function-3+))
 

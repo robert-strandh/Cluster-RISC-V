@@ -55,7 +55,7 @@
    (:file "load-upper-immediate-instruction")
    (:file "add-upper-immediate-to-pc-instruction")
    (:file "branch-instruction")
-   (:file "branch-equal-instruction")
+   (:file "beq-instruction")
    (:file "branch-not-equal-instruction")
    (:file "branch-less-than-instruction")
    (:file "branch-greater-or-equal-instruction")

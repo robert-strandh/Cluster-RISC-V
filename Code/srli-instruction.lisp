@@ -1,13 +1,13 @@
 (cl:in-package #:cluster-risc-v)
 
-(defconstant +shift-right-logical-immediate-function-6+ #b000000)
+(defconstant +srli-function-6+ #b000000)
 
-(defconstant +shift-right-logical-immediate-function-3+ #b101)
+(defconstant +srli-function-3+ #b101)
 
-(defclass shift-right-logical-immediate-instruction
+(defclass srli-instruction
     (integer-register-shift-immediate-instruction)
   ()
   (:default-initargs
-   :function-6 +shift-right-logical-immediate-function-6+
-   :function-3 +shift-right-logical-immediate-function-3+))
+   :function-6 +srli-function-6+
+   :function-3 +srli-function-3+))
 

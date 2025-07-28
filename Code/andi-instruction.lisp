@@ -6,4 +6,3 @@
     (integer-register-non-shift-immediate-instruction)
   ()
   (:default-initargs :function-3 +andi-function-3+))
-

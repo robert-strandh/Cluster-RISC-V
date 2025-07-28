@@ -1,6 +1,6 @@
 (cl:in-package #:cluster-risc-v)
 
-(defclass shift-left-logical-instruction
-    (integer-register-register-shift-left-logical-instruction-mixin
+(defclass sll-instruction
+    (integer-register-register-sll-instruction-mixin
      full-integer-register-register-instruction)
   ())

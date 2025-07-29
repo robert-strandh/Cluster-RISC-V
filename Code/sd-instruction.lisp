@@ -1,8 +1,8 @@
 (cl:in-package #:cluster-risc-v)
 
-(defconstant +opcode-store+ #b0100011)
+(defconstant +opcode-sd+ #b0100011)
 
-(defclass store-instruction (instruction)
+(defclass sd-instruction (instruction)
   ((%immediate-value
     :initarg :immediate-value
     :reader immediate-value)
@@ -17,7 +17,7 @@
     :reader function-3)))
 
 (defmethod initialize-instance :after
-    ((instruction store-instruction)
+    ((instruction sd-instruction)
      &key
        immediate-value
        function-3)

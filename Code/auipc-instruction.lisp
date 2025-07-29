@@ -1,7 +1,7 @@
 (cl:in-package #:cluster-risc-v)
 
-(defconstant +add-upper-immediate-to-pc-opcode+ #b0010111)
+(defconstant +auipc-opcode+ #b0010111)
 
-(defclass add-upper-immediate-to-pc-instruction (upper-instruction)
+(defclass auipc-instruction (upper-instruction)
   ()
-  (:default-initargs :opcode +add-upper-immediate-to-pc-opcode+))
+  (:default-initargs :opcode +auipc-opcode+))

@@ -56,6 +56,7 @@
    (:file "sd-instruction")
    (:file "sw-instruction")
    (:file "sh-instruction")
+   (:file "sb-instruction")
    (:file "upper-instruction")
    (:file "lui-instruction")
    (:file "auipc-instruction")

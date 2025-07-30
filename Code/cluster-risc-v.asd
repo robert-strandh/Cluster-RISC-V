@@ -29,7 +29,7 @@
    (:file "or-instruction")
    (:file "xor-instruction")
    (:file "half-integer-register-register-instruction")
-   (:file "add-word-instruction")
+   (:file "addw-instruction")
    (:file "subw-instruction")
    (:file "sllw-instruction")
    (:file "srlw-instruction")

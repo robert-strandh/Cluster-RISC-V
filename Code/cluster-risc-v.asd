@@ -52,6 +52,7 @@
    (:file "lw-instruction")
    (:file "lh-instruction")
    (:file "lb-instruction")
+   (:file "store-instruction")
    (:file "sd-instruction")
    (:file "upper-instruction")
    (:file "lui-instruction")

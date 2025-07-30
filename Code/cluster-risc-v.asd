@@ -49,6 +49,7 @@
    (:file "srai-instruction")
    (:file "load-instruction")
    (:file "ld-instruction")
+   (:file "lw-instruction")
    (:file "sd-instruction")
    (:file "upper-instruction")
    (:file "lui-instruction")

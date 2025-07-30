@@ -54,6 +54,7 @@
    (:file "lb-instruction")
    (:file "store-instruction")
    (:file "sd-instruction")
+   (:file "sw-instruction")
    (:file "upper-instruction")
    (:file "lui-instruction")
    (:file "auipc-instruction")

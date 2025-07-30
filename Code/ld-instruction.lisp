@@ -1,7 +1,5 @@
 (cl:in-package #:cluster-risc-v)
 
-(defconstant +opcode-ld+ #b0000011)
-
-(defclass ld-instruction (immediate-instruction)
+(defclass ld-instruction (load-instruction)
   ()
-  (:default-initargs :opcode +opcode-ld+))
+  (:default-initargs :width #.(integer-log 8)))

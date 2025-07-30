@@ -1,6 +1,6 @@
 (cl:in-package #:cluster-risc-v)
 
-(defclass subtract-instruction
-    (integer-register-register-subtract-instruction-mixin
+(defclass sub-instruction
+    (integer-register-register-sub-instruction-mixin
      full-integer-register-register-instruction)
   ())

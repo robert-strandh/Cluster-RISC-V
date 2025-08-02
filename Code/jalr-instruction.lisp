@@ -7,5 +7,5 @@
 (defclass jalr-instruction (immediate-instruction)
   ()
   (:default-initargs
-   :opcode +jump-and-link-opcode+
+   :opcode +jal-opcode+
    :function-3 +jalr-function-3+))

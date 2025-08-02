@@ -15,7 +15,7 @@
   (:default-initargs :opcode +opcoad-load+))
 
 (defmethod initialize-instance :after
-    ((instruction load-instruction))
+    ((instruction load-instruction)
      &key width)
   (check-type width (unsigned-byte 3)))
 

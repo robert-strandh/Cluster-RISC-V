@@ -12,7 +12,7 @@
    (%destination-register
     :initarg :destination-register
     :reader destination-register))
-  (:default-initargs :opcode +opcoad-load+))
+  (:default-initargs :opcode +opcode-load+))
 
 (defmethod initialize-instance :after
     ((instruction load-instruction)

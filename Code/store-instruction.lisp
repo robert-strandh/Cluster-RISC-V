@@ -1,6 +1,6 @@
 (cl:in-package #:cluster-risc-v)
 
-(defconstant +opcode-store-+  #b0100011)
+(defconstant +opcode-store+  #b0100011)
 
 (defclass store-instruction (instruction)
   ((%immediate-value
@@ -15,7 +15,7 @@
    (%width
     :initarg :width
     :reader width))
-  (:default-initargs :opcode +opcoad-store+))
+  (:default-initargs :opcode +opcode-store+))
 
 (defmethod initialize-instance :after
     ((instruction store-instruction)

@@ -1,6 +1,6 @@
 (cl:in-package #:cluster-risc-v)
 
-(defconstant +opcode-load-+  #b0000011)
+(defconstant +opcode-load+  #b0000011)
 
 (defclass load-instruction (instruction)
   ((%source-register

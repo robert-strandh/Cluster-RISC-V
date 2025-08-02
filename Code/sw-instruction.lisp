@@ -2,4 +2,4 @@
 
 (defclass sw-instruction (store-instruction)
   ()
-  (:default-initarg :width #.(integer-log 4)))
+  (:default-initargs :width #.(integer-log 4)))

@@ -2,4 +2,4 @@
 
 (defclass sd-instruction (store-instruction)
   ()
-  (:default-initarg :width #.(integer-log 8)))
+  (:default-initargs :width #.(integer-log 8)))

@@ -2,4 +2,4 @@
 
 (defclass sh-instruction (store-instruction)
   ()
-  (:default-initarg :width #.(integer-log 1)))
+  (:default-initargs :width #.(integer-log 1)))

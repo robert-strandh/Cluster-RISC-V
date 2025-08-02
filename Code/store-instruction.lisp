@@ -14,7 +14,7 @@
     :reader source-register-2)
    (%width
     :initarg :width
-    :reader width)))
+    :reader width))
   (:default-initargs :opcode +opcoad-store+))
 
 (defmethod initialize-instance :after

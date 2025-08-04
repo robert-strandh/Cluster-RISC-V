@@ -12,7 +12,7 @@
    (:file "integer-register-register-instruction")
    (:file "add-instruction-mixin")
    (:file "integer-register-register-subtract-instruction-mixin")
-   (:file "integer-register-register-shift-left-logical-instruction-mixin")
+   (:file "sll-instruction-mixin")
    (:file "integer-register-register-shift-right-logical-instruction-mixin")
    (:file "integer-register-register-shift-right-arithmetic-instruction-mixin")
    (:file "integer-register-register-set-less-than-instruction-mixin")

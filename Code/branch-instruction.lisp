@@ -3,9 +3,9 @@
 (defconstant +opcode-branch+ #b1100011)
 
 (defclass branch-instruction (instruction)
-  ((%offset
-    :initarg :offset
-    :reader offset)
+  ((%target
+    :initarg :target
+    :reader target)
    (%source-register-1
     :initarg :source-register-1
     :reader source-register-1)
@@ -19,8 +19,5 @@
 (defmethod initialize-instance :after
     ((instruction branch-instruction)
      &key
-       offset
        function-3)
-  (check-type offset (signed-byte 13))
-  (assert (evenp offset))
   (check-type function-3 (unsigned-byte 3)))

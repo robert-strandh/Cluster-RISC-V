@@ -8,11 +8,16 @@
 (defparameter *pc*
   (make-instance 'register))
 
+(eval-when (:compile-toplevel :load-toplevel :execute)
+  (loop for i from 0 to 31
+        for package = '#:cluster-risc-v
+        for variable-name = (intern (format nil "*X~a*" i) package)
+        do (proclaim `(special ,variable-name))))
+
 (loop for i from 0 to 31
       for package = '#:cluster-risc-v
       for variable-name = (intern (format nil "*X~a*" i) package)
-      do (proclaim `(special ,variable-name))
-         (setf (symbol-value variable-name)
+      do (setf (symbol-value variable-name)
                (make-instance 'integer-register
                  :register-number i)))
 

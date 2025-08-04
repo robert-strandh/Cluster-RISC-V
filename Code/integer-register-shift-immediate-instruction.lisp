@@ -11,7 +11,7 @@
   (check-type function-6 (unsigned-byte 6))
   (check-type shift-amount (unsigned-byte 6)))
 
-(defmethod encode
+(defmethod encode-instruction
     ((instruction integer-register-shift-immediate-instruction))
   (logior (ash (function-6 instruction) 26)
           (ash (shift-amount instruction) 20)

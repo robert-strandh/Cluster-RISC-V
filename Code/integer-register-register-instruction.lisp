@@ -3,7 +3,8 @@
 (defclass integer-register-register-instruction (register-instruction)
   ())
 
-(defmethod encode ((instruction integer-register-register-instruction))
+(defmethod encode-instructino
+    ((instruction integer-register-register-instruction))
   (logior (ash (function-7 instruction) 25)
           (ash (register-number (source-register-2 instruction)) 20)
           (ash (register-number (source-register-1 instruction)) 15)

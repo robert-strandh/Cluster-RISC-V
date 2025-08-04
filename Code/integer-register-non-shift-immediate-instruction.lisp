@@ -12,7 +12,7 @@
        immediate-value)
   (check-type immediate-value (signed-byte 12)))
 
-(defmethod encode
+(defmethod encode-instruction
     ((instruction integer-register-non-shift-immediate-instruction))
   (logior (ash (immediate-value instruction) 20)
           (ash (register-number (source-register instruction)) 15)

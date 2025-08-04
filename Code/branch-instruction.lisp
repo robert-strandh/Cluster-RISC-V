@@ -2,6 +2,8 @@
 
 (defconstant +opcode-branch+ #b1100011)
 
+;;; The TARGET slot contains an INSTRUCTION instance.
+
 (defclass branch-instruction (instruction)
   ((%target
     :initarg :target

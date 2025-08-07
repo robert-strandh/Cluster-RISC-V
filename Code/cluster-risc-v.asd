@@ -11,7 +11,7 @@
    (:file "register-instruction")
    (:file "integer-register-register-instruction")
    (:file "add-instruction-mixin")
-   (:file "integer-register-register-subtract-instruction-mixin")
+   (:file "sub-instruction-mixin")
    (:file "sll-instruction-mixin")
    (:file "srl-instruction-mixin")
    (:file "sra-instruction-mixin")

@@ -3,6 +3,16 @@
 (defclass integer-register-register-instruction (register-instruction)
   ())
 
+(defmethod initialize-instance :after
+    ((instruction integer-register-register-instruction)
+     &key
+       source-register-1
+       source-register-2
+       destination-register)
+  (check-type source-register-1 integer-register)
+  (check-type source-register-2 integer-register)
+  (check-type destination-register integer-register))
+
 (defmethod encode-instructino
     ((instruction integer-register-register-instruction))
   (logior (ash (function-7 instruction) 25)

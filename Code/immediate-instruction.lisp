@@ -13,5 +13,10 @@
 
 (defmethod initialize-instance :after
     ((instruction immediate-instruction)
-     &key function-3)
+     &key
+       function-3
+       source-register
+       destination-register)
+  (check-type source-register register)
+  (check-type destination-register register)
   (check-type function-3 (unsigned-byte 3)))

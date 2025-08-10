@@ -25,3 +25,10 @@
 
 (defun integer-log (n)
   (integer-length (1- n)))
+
+(defmethod encode-instruction ((instruction load-instruction))
+  (logior (ash (logand (offset instruction) #b111111111111) 20)
+          (ash (register-number (source-register instruction)) 15)
+          (ash (width instruction) 12)
+          (ash (register-number (destination-register instruction)) 7)
+          (opcode instruction)))

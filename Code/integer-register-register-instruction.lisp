@@ -13,7 +13,7 @@
   (check-type source-register-2 integer-register)
   (check-type destination-register integer-register))
 
-(defmethod encode-instructino
+(defmethod encode-instruction
     ((instruction integer-register-register-instruction))
   (logior (ash (function-7 instruction) 25)
           (ash (register-number (source-register-2 instruction)) 20)

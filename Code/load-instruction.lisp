@@ -11,7 +11,10 @@
     :reader width)
    (%destination-register
     :initarg :destination-register
-    :reader destination-register))
+    :reader destination-register)
+   (%offset
+    :initarg :offset
+    :reader offset))
   (:default-initargs :opcode +opcode-load+))
 
 (defmethod initialize-instance :after

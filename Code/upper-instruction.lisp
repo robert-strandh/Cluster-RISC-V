@@ -10,5 +10,8 @@
 
 (defmethod initialize-instance :after
     ((instruction upper-instruction)
-     &key immediate-value)
+     &key
+       immediate-value
+       destination-register)
+  (check-type destination-register integer-register)
   (check-type immediate-value (signed-byte 20)))

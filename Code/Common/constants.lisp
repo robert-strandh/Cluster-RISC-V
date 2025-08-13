@@ -2,6 +2,20 @@
 
 (defconstant +opcode-load+ #b0000011)
 
+(defconstant +func3-load-byte+ #b000)
+
+(defconstant +func3-load-half+ #b001)
+
+(defconstant +func3-load-word+ #b010)
+
+(defconstant +func3-load-double+ #b011)
+
+(defconstant +func3-load-byte-unsigned+ #b100)
+
+(defconstant +func3-load-half-unsigned+ #b101)
+
+(defconstant +func3-load-word-unsigned+ #b110)
+
 (defconstant +opcode-store+ #b0100011)
 
 (defconstant +opcode-integer-register-register+ #b0110011)

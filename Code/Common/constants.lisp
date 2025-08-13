@@ -18,6 +18,14 @@
 
 (defconstant +opcode-store+ #b0100011)
 
+(defconstant +func-3-store-byte #b000)
+
+(defconstant +func-3-store-half #b001)
+
+(defconstant +func-3-store-word #b010)
+
+(defconstant +func-3-store-double #b011)
+
 (defconstant +opcode-integer-register-register+ #b0110011)
 
 (defconstant +opcode-immediate-double-word+ #b0010011)

@@ -6,9 +6,6 @@
   ((%source-register
     :initarg :source-register
     :reader source-register)
-   (%width
-    :initarg :width
-    :reader width)
    (%destination-register
     :initarg :destination-register
     :reader destination-register)

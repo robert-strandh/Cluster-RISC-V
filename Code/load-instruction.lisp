@@ -2,6 +2,8 @@
 
 (defconstant +opcode-load+  #b0000011)
 
+(defgeneric width (instruction))
+
 (defclass load-instruction (instruction)
   ((%source-register
     :initarg :source-register

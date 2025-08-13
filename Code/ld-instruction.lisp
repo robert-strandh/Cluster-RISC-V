@@ -1,5 +1,7 @@
 (cl:in-package #:cluster-risc-v)
 
 (defclass ld-instruction (load-instruction)
-  ()
-  (:default-initargs :width #.(integer-log 8)))
+  ())
+
+(defmethod width ((instruction ld-instruction))
+  #.(integer-log 8))

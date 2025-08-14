@@ -5,7 +5,10 @@
 (defconstant +add-function-3+ #b000)
 
 (defclass add-instruction-mixin ()
-  ()
-  (:default-initargs
-   :function-7 +add-function-7+
-   :function-3 +add-function-3+))
+  ())
+
+(defmethod function-7 ((instruction add-instruction-mixin))
+  +add-function-7)
+
+(defmethod function-3 ((instruction add-instruction-mixin))
+  +add-function-3)

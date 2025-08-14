@@ -5,7 +5,10 @@
 (defconstant +and-function-3+ #b111)
 
 (defclass and-instruction (full-integer-register-register-instruction)
-  ()
-  (:default-initargs
-   :function-7 +and-function-7+
-   :function-3 +and-function-3+))
+  ())
+
+(defmethod function-7 ((instruction and-instruction))
+  +and-function-7+)
+
+(defmethod function-3 ((instruction and-instruction))
+  +and-function-3+)

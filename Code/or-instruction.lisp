@@ -5,7 +5,10 @@
 (defconstant +or-function-3+ #b110)
 
 (defclass or-instruction (full-integer-register-register-instruction)
-  ()
-  (:default-initargs
-   :function-7 +or-function-7+
-   :function-3 +or-function-3+))
+  ())
+
+(defmethod function-7 ((instruction or-instruction))
+  +or-function-7+)
+
+(defmethod function-3 ((instruction or-instruction))
+  +or-function-3+)

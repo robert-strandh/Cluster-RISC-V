@@ -5,7 +5,10 @@
 (defconstant +sll-function-3+ #b001)
 
 (defclass sll-instruction-mixin ()
-  ()
-  (:default-initargs
-   :function-7 +sll-function-7+
-   :function-3 +sll-function-3+))
+  ())
+
+(defmethod function-7 ((instruction sll-instruction-mixin))
+  +sll-function-7+)
+
+(defmethod function-3 ((instruction sll-instruction-mixin))
+  +sll-function-3+)

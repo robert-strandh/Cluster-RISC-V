@@ -143,4 +143,3 @@
 (defconstant +funct-3-jalr+ #b000)
 
 (defconstant +opcode-jal+ #b1101111)
-

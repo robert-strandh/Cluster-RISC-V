@@ -1,9 +1,5 @@
 (cl:in-package #:cluster-risc-v)
 
-(defgeneric function-7 (instruction))
-
-(defgeneric function-3 (instruction))
-
 (defclass register-instruction (instruction)
   ((%source-register-1
     :initarg :source-register-1

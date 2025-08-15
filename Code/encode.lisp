@@ -23,4 +23,6 @@
                    (encode-instruction instruction)))
     result))
   
+(defgeneric function-7 (instruction))
 
+(defgeneric function-3 (instruction))

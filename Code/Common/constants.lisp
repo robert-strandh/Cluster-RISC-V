@@ -26,7 +26,7 @@
 
 (defconstant +func-3-store-double #b011)
 
-(defconstant +opcode-integer-register-register+ #b0110011)
+(defconstant +opcode-integer-register-register-double+ #b0110011)
 
 (defconstant +func-3-add+ #b000)
 
@@ -90,7 +90,7 @@
 
 (defconstant +func-7-sraw+ #b0100000)
 
-(defconstant +opcode-immediate-double-word+ #b0010011)
+(defconstant +opcode-immediate-double+ #b0010011)
 
 (defconstant +func-3-addi+ #b000)
 

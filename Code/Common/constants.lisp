@@ -92,6 +92,24 @@
 
 (defconstant +opcode-immediate-double-word+ #b0010011)
 
+(defconstant +func-3-addi+ #b000)
+
+(defconstant +func-3-slli+ #b001)
+
+(defconstant +func-3-slti+ #b010)
+
+(defconstant +func-3-sltiu+ #b011)
+
+(defconstant +func-3-xori+ #b100)
+
+(defconstant +func-3-srli+ #b101)
+
+(defconstant +func-3-srai+ #b101)
+
+(defconstant +func-3-ori+ #b110)
+
+(defconstant +func-3-andi+ #b111)
+
 (defconstant +opcode-immediate-word+ #b0011011)
 
 (defconstant +opcode-branch+ #b1100011)

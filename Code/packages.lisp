@@ -2,6 +2,7 @@
 
 (defpackage #:cluster-risc-v
   (:use #:common-lisp)
+  (:local-nicknames (#:com #:cluster-risc-v-common))
   (:export
    #:addi-instruction
    #:add-instruction

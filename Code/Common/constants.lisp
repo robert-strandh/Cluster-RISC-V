@@ -112,4 +112,12 @@
 
 (defconstant +opcode-immediate-word+ #b0011011)
 
+(defconstant +func-3-addiw+ #b000)
+
+(defconstant +func-3-slliw+ #b001)
+
+(defconstant +func-3-srliw+ #b101)
+
+(defconstant +func-3-sraiw+ #b101)
+
 (defconstant +opcode-branch+ #b1100011)

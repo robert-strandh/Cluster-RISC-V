@@ -1,11 +1,10 @@
 (cl:in-package #:cluster-risc-v)
 
-(defconstant +xor-function-7+ #b0000000)
+(defclass xor-instruction (integer-register-register-double-instruction)
+  ())
 
-(defconstant +xor-function-3+ #b100)
+(defmethod function-7 ((instruction xor-instruction))
+  com:+function-7-xor+)
 
-(defclass xor-instruction (full-integer-register-register-instruction)
-  ()
-  (:default-initargs
-   :function-7 +xor-function-7+
-   :function-3 +xor-function-3+))
+(defmethod function-3 ((instruction xor-instruction))
+  com:+function-3-xor+)

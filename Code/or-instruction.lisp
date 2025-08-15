@@ -1,14 +1,10 @@
 (cl:in-package #:cluster-risc-v)
 
-(defconstant +or-function-7+ #b0000000)
-
-(defconstant +or-function-3+ #b110)
-
-(defclass or-instruction (full-integer-register-register-instruction)
+(defclass or-instruction (integer-register-register-double-instruction)
   ())
 
 (defmethod function-7 ((instruction or-instruction))
-  +or-function-7+)
+  com:+function-7-or+)
 
 (defmethod function-3 ((instruction or-instruction))
-  +or-function-3+)
+  com:+function-3-or+)

@@ -1,6 +1,11 @@
 (cl:in-package #:cluster-risc-v)
 
 (defclass sub-instruction
-    (sub-instruction-mixin
-     full-integer-register-register-instruction)
+    (integer-register-register-double-instruction)
   ())
+
+(defmethod function-7 ((instruction sub-instruction))
+  com:+function-7-sub+)
+
+(defmethod function-3 ((instruction sub-instruction))
+  com:+function-3-sub+)

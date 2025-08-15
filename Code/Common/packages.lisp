@@ -69,4 +69,9 @@
    #:+func-3-blt+
    #:+func-3-bge+
    #:+func-3-bltu+
-   #:+func-3-bgeu+))
+   #:+func-3-bgeu+
+   #:+opcode-lui+
+   #:+opcode-auipc+
+   #:+opcode-jalr+
+   #:+funct-3-jalr+
+   #:+opcode-jal+))

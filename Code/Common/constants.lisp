@@ -121,3 +121,15 @@
 (defconstant +func-3-sraiw+ #b101)
 
 (defconstant +opcode-branch+ #b1100011)
+
+(defconstant +func-3-beq+ #b000)
+
+(defconstant +func-3-bne+ #b001)
+
+(defconstant +func-3-blt+ #b100)
+
+(defconstant +func-3-bge+ #b101)
+
+(defconstant +func-3-bltu+ #b110)
+
+(defconstant +func-3-bgeu+ #b111)

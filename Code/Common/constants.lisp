@@ -28,6 +28,46 @@
 
 (defconstant +opcode-integer-register-register+ #b0110011)
 
+(defconstant +func-3-add+ #b000)
+
+(defconstant +func-7-add+ #b0000000)
+
+(defconstant +func-3-sub+ #b000)
+
+(defconstant +func-7-sub+ #b0100000)
+
+(defconstant +func-3-sll+ #b001)
+
+(defconstant +func-7-sll+ #b0000000)
+
+(defconstant +func-3-slt+ #b010)
+
+(defconstant +func-7-slt+ #b0000000)
+
+(defconstant +func-3-sltu+ #b011)
+
+(defconstant +func-7-sltu+ #b0000000)
+
+(defconstant +func-3-xor+ #b100)
+
+(defconstant +func-7-xor+ #b0000000)
+
+(defconstant +func-3-srl+ #b101)
+
+(defconstant +func-7-srl+ #b0000000)
+
+(defconstant +func-3-sra+ #b101)
+
+(defconstant +func-7-sra+ #b0100000)
+
+(defconstant +func-3-or+ #b110)
+
+(defconstant +func-7-or+ #b0000000)
+
+(defconstant +func-3-and+ #b111)
+
+(defconstant +func-7-and+ #b0000000)
+
 (defconstant +opcode-immediate-double-word+ #b0010011)
 
 (defconstant +opcode-immediate-word+ #b0011011)

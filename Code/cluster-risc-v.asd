@@ -8,7 +8,6 @@
    (:file "registers")
    (:file "instruction")
    (:file "encode")
-   (:file "register-instruction")
    (:file "integer-register-register-instruction")
    (:file "add-instruction-mixin")
    (:file "sub-instruction-mixin")

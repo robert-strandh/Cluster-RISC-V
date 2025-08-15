@@ -1,7 +1,7 @@
 (cl:in-package #:asdf-user)
 
 (defsystem "cluster-risc-v"
-  :depends-on ()
+  :depends-on ("cluster-risc-v-common")
   :serial t
   :components
   ((:file "packages")
@@ -9,12 +9,7 @@
    (:file "instruction")
    (:file "encode")
    (:file "integer-register-register-instruction")
-   (:file "add-instruction-mixin")
-   (:file "sub-instruction-mixin")
-   (:file "sll-instruction-mixin")
-   (:file "srl-instruction-mixin")
-   (:file "sra-instruction-mixin")
-   (:file "full-integer-register-register-instruction")
+   (:file "integer-register-register-double-instruction")
    (:file "add-instruction")
    (:file "sub-instruction")
    (:file "sll-instruction")
@@ -25,7 +20,7 @@
    (:file "and-instruction")
    (:file "or-instruction")
    (:file "xor-instruction")
-   (:file "half-integer-register-register-instruction")
+   (:file "integer-register-register-word-instruction")
    (:file "addw-instruction")
    (:file "subw-instruction")
    (:file "sllw-instruction")

@@ -133,3 +133,14 @@
 (defconstant +func-3-bltu+ #b110)
 
 (defconstant +func-3-bgeu+ #b111)
+
+(defconstant +opcode-lui+ #b0110111)
+
+(defconstant +opcode-auipc+ #b0010111)
+
+(defconstant +opcode-jalr+ #b1100111)
+
+(defconstant +funct-3-jalr+ #b000)
+
+(defconstant +opcode-jal+ #b1101111)
+

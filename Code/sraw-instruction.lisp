@@ -5,7 +5,7 @@
   ())
 
 (defmethod func-7 ((instruction sraw-instruction))
-  com:+fun-7-sraw+)
+  com:+func-7-sraw+)
 
 (defmethod func-3 ((instruction sraw-instruction))
-  com:+fun-3-sraw+)
+  com:+func-3-sraw+)

@@ -4,7 +4,7 @@
   ())
 
 (defmethod func-7 ((instruction addw-instruction))
-  com:+fun-7-addw+)
+  com:+func-7-addw+)
 
 (defmethod func-3 ((instruction addw-instruction))
-  com:+fun-3-addw+)
+  com:+func-3-addw+)

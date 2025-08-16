@@ -4,13 +4,13 @@
   (:use #:common-lisp)
   (:export
    #:+opcode-load+
-   #:+func3-load-byte+
-   #:+func3-load-half+
-   #:+func3-load-word+
-   #:+func3-load-double+
-   #:+func3-load-byte-unsigned+
-   #:+func3-load-half-unsigned+
-   #:+func3-load-word-unsigned+
+   #:+func-3-load-byte+
+   #:+func-3-load-half+
+   #:+func-3-load-word+
+   #:+func-3-load-double+
+   #:+func-3-load-byte-unsigned+
+   #:+func-3-load-half-unsigned+
+   #:+func-3-load-word-unsigned+
    #:+opcode-store+
    #:+func-3-store-byte
    #:+func-3-store-half
@@ -73,5 +73,5 @@
    #:+opcode-lui+
    #:+opcode-auipc+
    #:+opcode-jalr+
-   #:+funct-3-jalr+
+   #:+func-3-jalr+
    #:+opcode-jal+))

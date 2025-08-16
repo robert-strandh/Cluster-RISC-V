@@ -4,9 +4,6 @@
   ((%source-register
     :initarg :source-register
     :reader source-register)
-   (%function-3
-    :initarg :function-3
-    :reader function-3)
    (%destination-register
     :initarg :destination-register
     :reader destination-register)))
@@ -14,9 +11,7 @@
 (defmethod initialize-instance :after
     ((instruction immediate-instruction)
      &key
-       function-3
        source-register
        destination-register)
   (check-type source-register register)
-  (check-type destination-register register)
-  (check-type function-3 (unsigned-byte 3)))
+  (check-type destination-register register))

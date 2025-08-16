@@ -25,7 +25,7 @@
   
 (defgeneric opcode (instruction))
 
-(defgeneric function-7 (instruction))
+(defgeneric func-7 (instruction))
 
-(defgeneric function-3 (instruction))
+(defgeneric func-3 (instruction))
 

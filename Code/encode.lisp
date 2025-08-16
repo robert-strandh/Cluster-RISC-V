@@ -22,8 +22,6 @@
           do (setf (aref result index)
                    (encode-instruction instruction)))
     result))
-  
-(defgeneric opcode (instruction))
 
 (defgeneric func-7 (instruction))
 

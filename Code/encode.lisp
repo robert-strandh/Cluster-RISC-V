@@ -27,3 +27,4 @@
 
 (defgeneric func-3 (instruction))
 
+(defgeneric opcode (instruction))

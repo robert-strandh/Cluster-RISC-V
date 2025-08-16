@@ -4,8 +4,8 @@
     (integer-register-register-double-instruction)
   ())
 
-(defmethod function-7 ((instruction sub-instruction))
-  com:+function-7-sub+)
+(defmethod func-7 ((instruction sub-instruction))
+  com:+func-7-sub+)
 
-(defmethod function-3 ((instruction sub-instruction))
-  com:+function-3-sub+)
+(defmethod func-3 ((instruction sub-instruction))
+  com:+func-3-sub+)

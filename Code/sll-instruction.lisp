@@ -3,8 +3,8 @@
 (defclass sll-instruction (integer-register-register-double-instruction)
   ())
 
-(defmethod function-7 ((instruction sll-instruction))
-  com:+function-7-sll+)
+(defmethod func-7 ((instruction sll-instruction))
+  com:+func-7-sll+)
 
-(defmethod function-3 ((instruction sll-instruction))
-  com:+function-3-sll+)
+(defmethod func-3 ((instruction sll-instruction))
+  com:+func-3-sll+)

@@ -4,4 +4,4 @@
   ())
 
 (defmethod func-3 ((instruction bge-instruction))
-  com:+func-3-bg3+)
+  com:+func-3-bge+)

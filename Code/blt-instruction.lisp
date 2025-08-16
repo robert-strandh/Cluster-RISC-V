@@ -4,4 +4,4 @@
   ())
 
 (defmethod func-3 ((instructino blt-instruction))
-  com:+fun-3-blt+)
+  com:+func-3-blt+)

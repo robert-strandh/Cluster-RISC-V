@@ -1,10 +1,7 @@
 (cl:in-package #:cluster-risc-v)
 
-(defconstant +set-less-than-unsigned-immediate-function-3+ #b011)
+(defclass sltiu-instruction (integer-register-immediate-double-instruction)
+  ())
 
-(defclass set-less-than-unsigned-immediate-instruction
-    (integer-register-non-shift-immediate-instruction)
-  ()
-  (:default-initargs
-   :function-3 +set-less-than-unsigned-immediate-function-3+))
-
+(defmethod func-3 ((instruction sltiu-instruction))
+  com:+func-3-sltiu+)

@@ -1,9 +1,7 @@
 (cl:in-package #:cluster-risc-v)
 
-(defconstant +set-less-than-immediate-function-3+ #b010)
+(defclass slti-instruction (integer-register-immediate-double-instruction)
+  ())
 
-(defclass set-less-than-immediate-instruction
-    (integer-register-non-shift-immediate-instruction)
-  ()
-  (:default-initargs :function-3 +set-less-than-immediate-function-3+))
-
+(defmethod func-3 ((instruction slti-instruction))
+  com:+func-3-slti+)

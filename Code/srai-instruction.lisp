@@ -1,12 +1,7 @@
 (cl:in-package #:cluster-risc-v)
 
-(defconstant +srai-function-6+ #b010000)
+(defclass srai-instruction (integer-register-immediate-double-instruction)
+  ())
 
-(defconstant +srai-function-3+ #b101)
-
-(defclass srai-instruction
-    (integer-register-shift-immediate-instruction)
-  ()
-  (:default-initargs
-   :function-6 +srai-function-6+
-   :function-3 +srai-function-3+))
+(defmethod func-3 ((instruction srai-instruction))
+  com:+func-3-srai+)

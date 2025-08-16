@@ -1,8 +1,7 @@
 (cl:in-package #:cluster-risc-v)
 
-(defconstant +xor-immediate-function-3+ #b100)
+(defclass xori-instruction (integer-register-immediate-double-instruction)
+  ())
 
-(defclass xor-immediate-instruction
-    (integer-register-non-shift-immediate-instruction)
-  ()
-  (:default-initargs :function-3 +xor-immediate-function-3+))
+(defmethod func-3 ((instruction xori-instruction))
+  com:+func-3-xori+)

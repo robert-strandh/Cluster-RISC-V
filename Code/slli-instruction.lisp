@@ -1,12 +1,7 @@
 (cl:in-package #:cluster-risc-v)
 
-(defconstant +slli-function-6+ #b000000)
+(defclass slli-instruction (integer-register-immediate-double-instruction)
+  ())
 
-(defconstant +slli-function-3+ #b001)
-
-(defclass slli-instruction
-    (integer-register-shift-immediate-instruction)
-  ()
-  (:default-initargs
-   :function-6 +slli-function-6+
-   :function-3 +slli-function-3+))
+(defmethod func-3 ((instruction slli-instruction))
+  com:+func-3-slli+)

@@ -3,8 +3,8 @@
 (defclass or-instruction (integer-register-register-double-instruction)
   ())
 
-(defmethod function-7 ((instruction or-instruction))
-  com:+function-7-or+)
+(defmethod func-7 ((instruction or-instruction))
+  com:+func-7-or+)
 
-(defmethod function-3 ((instruction or-instruction))
-  com:+function-3-or+)
+(defmethod func-3 ((instruction or-instruction))
+  com:+func-3-or+)

@@ -16,6 +16,6 @@
     ((instruction integer-register-non-shift-immediate-instruction))
   (logior (ash (immediate-value instruction) 20)
           (ash (register-number (source-register instruction)) 15)
-          (ash (function-3 instruction) 12)
+          (ash (func-3 instruction) 12)
           (ash (register-number (destination-register instruction)) 7)
           (opcode instruction)))

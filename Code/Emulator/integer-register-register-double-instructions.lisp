@@ -49,13 +49,21 @@
 
 (defun execute-srl-instruction
     (source-register-1 source-register-2 destination-register)
-  (declare (ignore source-register-1 source-register-2 destination-register))
-  )
+  (let ((shift-amount
+          (ldb (byte 6 0) (integer-register-contents source-register-2))))
+    (setf (integer-register-contents destination-register)
+          (ldb (byte 64 0)
+               (ash (integer-register-contents source-register-1)
+                    shift-amount)))))
 
 (defun execute-sra-instruction
     (source-register-1 source-register-2 destination-register)
-  (declare (ignore source-register-1 source-register-2 destination-register))
-  )
+  (let ((shift-amount
+          (ldb (byte 6 0) (integer-register-contents source-register-2))))
+    (setf (integer-register-contents destination-register)
+          (ldb (byte 64 0)
+               (ash (sign-extend (integer-register-contents source-register-1))
+                    shift-amount)))))
 
 (defun execute-or-instruction
     (source-register-1 source-register-2 destination-register)

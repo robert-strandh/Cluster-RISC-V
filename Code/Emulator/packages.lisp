@@ -3,4 +3,6 @@
 (defpackage #:cluster-risc-v-emulator
   (:use #:common-lisp)
   (:local-nicknames (#:com #:cluster-risc-v-common))
-  (:export))
+  (:shadow #:read-byte)
+  (:export
+   #:*client*))

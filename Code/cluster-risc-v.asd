@@ -42,6 +42,7 @@
    (:file "addiw-instruction")
    (:file "slliw-instruction")
    (:file "srliw-instruction")
+   (:file "sraiw-instruction")
    (:file "load-instruction")
    (:file "ld-instruction")
    (:file "lw-instruction")

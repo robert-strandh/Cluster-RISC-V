@@ -39,6 +39,7 @@
    (:file "srli-instruction")
    (:file "srai-instruction")
    (:file "integer-register-immediate-word-instruction")
+   (:file "addiw-instruction")
    (:file "slliw-instruction")
    (:file "srliw-instruction")
    (:file "load-instruction")

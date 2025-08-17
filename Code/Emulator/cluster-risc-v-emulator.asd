@@ -1,6 +1,6 @@
 (cl:in-package #:asdf-user)
 
-(defsoystem "cluster-risc-v-emulator"
+(defsystem "cluster-risc-v-emulator"
   :depends-on ("cluster-risc-v-common")
   :serial t
   :components

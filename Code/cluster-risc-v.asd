@@ -40,6 +40,7 @@
    (:file "srai-instruction")
    (:file "integer-register-immediate-word-instruction")
    (:file "slliw-instruction")
+   (:file "srliw-instruction")
    (:file "load-instruction")
    (:file "ld-instruction")
    (:file "lw-instruction")

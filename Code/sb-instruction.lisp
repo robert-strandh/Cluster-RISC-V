@@ -1,5 +1,7 @@
 (cl:in-package #:cluster-risc-v)
 
-(defclass sh-instruction (store-instruction)
-  ()
-  (:default-initargs :width #.(integer-log 1)))
+(defclass sb-instruction (store-instruction)
+  ())
+
+(defmethod width ((instruction sh-instruction))
+  #.(integer-log 1))

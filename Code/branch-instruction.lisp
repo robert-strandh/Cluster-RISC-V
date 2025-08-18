@@ -1,7 +1,5 @@
 (cl:in-package #:cluster-risc-v)
 
-(defconstant +opcode-branch+ #b1100011)
-
 ;;; The TARGET slot contains an INSTRUCTION instance.
 
 (defclass branch-instruction (instruction)
@@ -24,3 +22,6 @@
   (check-type source-register-1 integer-register)
   (check-type source-register-2 integer-register)
   (check-type target instruction))
+
+(defmethod opcode ((instruction branch-instruction))
+  com:+opcode-branch+)

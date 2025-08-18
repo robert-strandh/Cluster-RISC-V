@@ -18,9 +18,8 @@
 
 (defmethod initialize-instance :after
     ((instruction load-instruction)
-     &key width offset)
-  (check-type offset (signed-byte 12))
-  (check-type width (unsigned-byte 3)))
+     &key offset)
+  (check-type offset (signed-byte 12)))
 
 (defun integer-log (n)
   (integer-length (1- n)))

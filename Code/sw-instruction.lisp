@@ -3,5 +3,5 @@
 (defclass sw-instruction (store-instruction)
   ())
 
-(defmethod width ((instruction sh-instruction))
+(defmethod width ((instruction sw-instruction))
   #.(integer-log 4))

@@ -9,12 +9,12 @@
    (%source-register-2
     :initarg :source-register-2
     :reader source-register-2)
-   (%width
-    :initarg :width
-    :reader width))
+   (%offset
+    :initarg :offset
+    :reader offset))
   (:default-initargs :opcode +opcode-store+))
 
 (defmethod initialize-instance :after
     ((instruction store-instruction)
-     &key width)
-  (check-type width (unsigned-byte 3)))
+     &key offset)
+  (check-type offset (signed-byte 12)))

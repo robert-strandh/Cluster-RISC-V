@@ -1,7 +1,5 @@
 (cl:in-package #:cluster-risc-v)
 
-(defconstant +opcode-load+  #b0000011)
-
 (defgeneric width (instruction))
 
 (defclass load-instruction (instruction)
@@ -13,13 +11,15 @@
     :reader destination-register)
    (%offset
     :initarg :offset
-    :reader offset))
-  (:default-initargs :opcode +opcode-load+))
+    :reader offset)))
 
 (defmethod initialize-instance :after
     ((instruction load-instruction)
      &key offset)
   (check-type offset (signed-byte 12)))
+
+(defmethod opcode ((instruction load-instruction))
+  com:+opcode-load+)
 
 (defun integer-log (n)
   (integer-length (1- n)))

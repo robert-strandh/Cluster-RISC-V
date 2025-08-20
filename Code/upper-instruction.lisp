@@ -14,4 +14,5 @@
        immediate-value
        destination-register)
   (check-type destination-register integer-register)
-  (check-type immediate-value (signed-byte 20)))
+  (check-type immediate-value (signed-byte 32))
+  (assert (zerop (logand immediate-value #.(1- (expt 2 12)))))

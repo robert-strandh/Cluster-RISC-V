@@ -1,6 +1,6 @@
 (cl:in-package #:cluster-risc-v)
 
-(defclass jal-instruction (upper-instruction)
+(defclass jal-instruction (instruction)
   ((%offset
     :initarg :offset
     :reader offset)

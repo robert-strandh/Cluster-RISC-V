@@ -12,3 +12,10 @@
 
 (defmethod func-3 ((instruction jalr-instruction))
   com:+func-3-jalr+)
+
+(defmethod encode-instruction ((instruction jalr-instruction))
+  (logior (ash (ldb (byte 12 0) (offset instruction)) 20)
+          (ash (register-number (source-register instruction)) 15)
+          (ash (func-3 instruction) 12)
+          (ash (register-number (destination-register instruction)) 7)
+          (opcode instruction)))

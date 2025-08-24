@@ -35,6 +35,7 @@
    (:file "andi-instruction")
    (:file "ori-instruction")
    (:file "xori-instruction")
+   (:file "shift-immediate-double-instruction")
    (:file "slli-instruction")
    (:file "srli-instruction")
    (:file "srai-instruction")

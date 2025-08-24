@@ -51,11 +51,14 @@
    #:+opcode-immediate-double+
    #:+func-3-addi+
    #:+func-3-slli+
+   #:+func-7-slli+
    #:+func-3-slti+
    #:+func-3-sltiu+
    #:+func-3-xori+
    #:+func-3-srli+
+   #:+func-7-srli+
    #:+func-3-srai+
+   #:+func-7-srai+
    #:+func-3-ori+
    #:+func-3-andi+
    #:+opcode-immediate-word+

@@ -96,6 +96,8 @@
 
 (defconstant +func-3-slli+ #b001)
 
+(defconstant +func-7-slli+ #b0000000)
+
 (defconstant +func-3-slti+ #b010)
 
 (defconstant +func-3-sltiu+ #b011)
@@ -104,7 +106,11 @@
 
 (defconstant +func-3-srli+ #b101)
 
+(defconstant +func-7-srli+ #b0000000)
+
 (defconstant +func-3-srai+ #b101)
+
+(defconstant +func-7-srai+ #b0100000)
 
 (defconstant +func-3-ori+ #b110)
 

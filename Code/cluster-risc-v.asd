@@ -29,6 +29,7 @@
    (:file "immediate-instruction")
    (:file "integer-register-immediate-instruction")
    (:file "integer-register-immediate-double-instruction")
+   (:file "non-shift-immediate-double-instruction")
    (:file "addi-instruction")
    (:file "slti-instruction")
    (:file "sltiu-instruction")

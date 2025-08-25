@@ -1,6 +1,6 @@
 (cl:in-package #:cluster-risc-v)
 
-(defclass ori-instruction (integer-register-register-double-instruction)
+(defclass ori-instruction (non-shift-register-double-instruction)
   ())
 
 (defmethod func-3 ((instruction ori-instruction))

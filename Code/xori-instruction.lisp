@@ -1,6 +1,6 @@
 (cl:in-package #:cluster-risc-v)
 
-(defclass xori-instruction (integer-register-immediate-double-instruction)
+(defclass xori-instruction (non-shift-immediate-double-instruction)
   ())
 
 (defmethod func-3 ((instruction xori-instruction))

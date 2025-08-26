@@ -64,8 +64,11 @@
    #:+opcode-immediate-word+
    #:+func-3-addiw+
    #:+func-3-slliw+
+   #:+func-7-slliw+
    #:+func-3-srliw+
+   #:+func-7-srliw+
    #:+func-3-sraiw+
+   #:+func-7-sraiw+
    #:+opcode-branch+
    #:+func-3-beq+
    #:+func-3-bne+

@@ -122,9 +122,15 @@
 
 (defconstant +func-3-slliw+ #b001)
 
+(defconstant +func-7-slliw+ #b0000000)
+
 (defconstant +func-3-srliw+ #b101)
 
+(defconstant +func-7-srliw+ #b0000000)
+
 (defconstant +func-3-sraiw+ #b101)
+
+(defconstant +func-7-sraiw+ #b0100000)
 
 (defconstant +opcode-branch+ #b1100011)
 

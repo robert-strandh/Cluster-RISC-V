@@ -42,6 +42,7 @@
    (:file "srai-instruction")
    (:file "integer-register-immediate-word-instruction")
    (:file "addiw-instruction")
+   (:file "shift-immediate-word-instruction")
    (:file "slliw-instruction")
    (:file "srliw-instruction")
    (:file "sraiw-instruction")

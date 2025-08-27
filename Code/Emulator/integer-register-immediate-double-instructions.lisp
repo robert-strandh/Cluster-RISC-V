@@ -15,6 +15,13 @@
              (ash (integer-register-contents source-register)
                   shift-amount))))
 
+(defun execute-slti-instruction
+    (immediate-value source-register destination-register)
+  (setf (integer-register-contents destination-register)
+        (if (< immediate-value
+               (sign-extend (integer-register-contents source-register)))
+            1 0)))
+
 (defun execute-integer-register-immediate-instruction
     (raw-immediate-value func-3 source-register destination-register)
   (ecase func-3
@@ -26,7 +33,10 @@
      (execute-slli-instruction
       (ldb (byte 6 0) raw-immediate-value)
       source-register destination-register))
-    (#b010)
+    (#b010
+     (execute-slti-instruction
+      (sign-extend-12 raw-immediate-value)
+      source-register destination-register))
     (#b011)
     (#b100)
     (#b101)

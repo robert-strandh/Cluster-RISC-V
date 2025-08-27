@@ -22,6 +22,13 @@
                (sign-extend (integer-register-contents source-register)))
             1 0)))
 
+(defun execute-sltiu-instruction
+    (immediate-value source-register destination-register)
+  (setf (integer-register-contents destination-register)
+        (if (< immediate-value
+               (integer-register-contents source-register))
+            1 0)))
+
 (defun execute-integer-register-immediate-instruction
     (raw-immediate-value func-3 source-register destination-register)
   (ecase func-3
@@ -37,7 +44,10 @@
      (execute-slti-instruction
       (sign-extend-12 raw-immediate-value)
       source-register destination-register))
-    (#b011)
+    (#b011
+     (execute-sltiu-instruction
+      raw-immediate-value
+      source-register destination-register))
     (#b100)
     (#b101)
     (#b110)

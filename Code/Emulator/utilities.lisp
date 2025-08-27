@@ -8,3 +8,8 @@
   (if (>= unsigned-byte #.(expt 2 63))
       (- unsigned-byte #.(expt 2 64))
       unsigned-byte))
+
+(defun sign-extend-12 (raw-immediate-value)
+  (if (>= raw-immediate-value #.(expt 2 11))
+      (- raw-immediate-value #.(expt 2 12))
+      raw-immediate-value))

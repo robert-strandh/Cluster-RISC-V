@@ -29,6 +29,12 @@
                (integer-register-contents source-register))
             1 0)))
 
+(defun execute-xori-instruction
+    (immediate-value source-register destination-register)
+  (setf (integer-register-contents destination-register)
+        (logxor immediate-value
+             (integer-register-contents source-register))))
+
 (defun execute-integer-register-immediate-instruction
     (raw-immediate-value func-3 source-register destination-register)
   (ecase func-3
@@ -48,7 +54,10 @@
      (execute-sltiu-instruction
       raw-immediate-value
       source-register destination-register))
-    (#b100)
+    (#b100
+     (execute-xori-instruction
+      raw-immediate-value
+      source-register destination-register))
     (#b101)
     (#b110)
     (#b111)))

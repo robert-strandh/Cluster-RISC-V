@@ -58,6 +58,15 @@
      (execute-xori-instruction
       raw-immediate-value
       source-register destination-register))
-    (#b101)
+    (#b101
+     (ecase (ldb (byte 6 6) raw-immediate-value)
+       (#b000000
+        (execute-srli-instruction
+         (ldb (byte 6 0) raw-immediate-value)
+         source-register destination-register))
+       (#b010000
+        (execute-srai-instruction
+         (ldb (byte 6 0) raw-immediate-value)
+         source-register destination-register))))
     (#b110)
     (#b111)))

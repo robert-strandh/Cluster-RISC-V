@@ -35,6 +35,12 @@
         (logxor immediate-value
              (integer-register-contents source-register))))
 
+(defun execute-srli-instruction
+    (shift-amount source-register destination-register)
+  (setf (integer-register-contents destination-register)
+        (ash (integer-register-contents source-register)
+             (- shift-amount))))
+
 (defun execute-integer-register-immediate-instruction
     (raw-immediate-value func-3 source-register destination-register)
   (ecase func-3

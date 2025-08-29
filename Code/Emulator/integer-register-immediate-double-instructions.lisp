@@ -56,9 +56,11 @@
       (sign-extend-12 raw-immediate-value)
       source-register destination-register))
     (#b001
-     (execute-slli-instruction
-      (ldb (byte 6 0) raw-immediate-value)
-      source-register destination-register))
+     (ecase (ldb (byte 6 6) raw-immediate-value)
+       (#b000000
+        (execute-slli-instruction
+         (ldb (byte 6 0) raw-immediate-value)
+         source-register destination-register))))
     (#b010
      (execute-slti-instruction
       (sign-extend-12 raw-immediate-value)

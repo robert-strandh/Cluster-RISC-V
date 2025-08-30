@@ -3,6 +3,8 @@
 (defparameter *integer-registers*
   (make-array 32 :element-type '(unsigned-byte 64)))
 
+(defparameter *pc* 0)
+
 (defun integer-register-contents (register-number)
   (if (zerop register-number)
       0

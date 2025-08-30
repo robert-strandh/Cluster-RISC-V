@@ -33,7 +33,7 @@
     (immediate-value source-register destination-register)
   (setf (integer-register-contents destination-register)
         (logxor immediate-value
-             (integer-register-contents source-register))))
+                (integer-register-contents source-register))))
 
 (defun execute-srli-instruction
     (shift-amount source-register destination-register)
@@ -47,6 +47,12 @@
         (ldb (byte 64 0)
              (ash (sign-extend (integer-register-contents source-register))
                   (- shift-amount)))))
+
+(defun execute-ori-instruction
+    (immediate-value source-register destination-register)
+  (setf (integer-register-contents destination-register)
+        (logior immediate-value
+                (integer-register-contents source-register))))
 
 (defun execute-integer-register-immediate-instruction
     (raw-immediate-value func-3 source-register destination-register)
@@ -83,5 +89,8 @@
         (execute-srai-instruction
          (ldb (byte 6 0) raw-immediate-value)
          source-register destination-register))))
-    (#b110)
+    (#b110
+     (execute-ori-instruction
+      raw-immediate-value
+      source-register destination-register))
     (#b111)))

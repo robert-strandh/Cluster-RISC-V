@@ -54,6 +54,12 @@
         (logior immediate-value
                 (integer-register-contents source-register))))
 
+(defun execute-andi-instruction
+    (immediate-value source-register destination-register)
+  (setf (integer-register-contents destination-register)
+        (logand immediate-value
+                (integer-register-contents source-register))))
+
 (defun execute-integer-register-immediate-instruction
     (raw-immediate-value func-3 source-register destination-register)
   (ecase func-3
@@ -93,4 +99,7 @@
      (execute-ori-instruction
       raw-immediate-value
       source-register destination-register))
-    (#b111)))
+    (#b111
+     (execute-andi-instruction
+      raw-immediate-value
+      source-register destination-register))))

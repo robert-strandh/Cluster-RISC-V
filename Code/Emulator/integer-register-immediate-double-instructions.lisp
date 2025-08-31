@@ -5,7 +5,7 @@
   (setf (integer-register-contents destination-register)
         (ldb (byte 64 0)
              (+ immediate-value
-                (sign-extend
+                (sign-extend-64
                  (integer-register-contents source-register))))))
 
 (defun execute-slli-instruction
@@ -19,7 +19,7 @@
     (immediate-value source-register destination-register)
   (setf (integer-register-contents destination-register)
         (if (< immediate-value
-               (sign-extend (integer-register-contents source-register)))
+               (sign-extend-64 (integer-register-contents source-register)))
             1 0)))
 
 (defun execute-sltiu-instruction
@@ -45,7 +45,7 @@
     (shift-amount source-register destination-register)
   (setf (integer-register-contents destination-register)
         (ldb (byte 64 0)
-             (ash (sign-extend (integer-register-contents source-register))
+             (ash (sign-extend-64 (integer-register-contents source-register))
                   (- shift-amount)))))
 
 (defun execute-ori-instruction

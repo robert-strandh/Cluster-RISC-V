@@ -4,18 +4,18 @@
     (source-register-1 source-register-2 destination-register)
   (setf (integer-register-contents destination-register)
         (ldb (byte 64 0)
-             (+ (sign-extend
+             (+ (sign-extend-64
                  (integer-register-contents source-register-1))
-                (sign-extend
+                (sign-extend-64
                  (integer-register-contents source-register-2))))))
 
 (defun execute-sub-instruction
     (source-register-1 source-register-2 destination-register)
   (setf (integer-register-contents destination-register)
         (ldb (byte 64 0)
-             (- (sign-extend
+             (- (sign-extend-64
                  (integer-register-contents source-register-1))
-                (sign-extend
+                (sign-extend-64
                  (integer-register-contents source-register-2))))))
 
 (defun execute-sll-instruction
@@ -30,8 +30,8 @@
 (defun execute-slt-instruction
     (source-register-1 source-register-2 destination-register)
   (setf (integer-register-contents destination-register)
-        (if (< (sign-extend (integer-register-contents source-register-1))
-               (sign-extend (integer-register-contents source-register-2)))
+        (if (< (sign-extend-64 (integer-register-contents source-register-1))
+               (sign-extend-64 (integer-register-contents source-register-2)))
             1 0)))
 
 (defun execute-sltu-instruction
@@ -62,7 +62,7 @@
           (ldb (byte 6 0) (integer-register-contents source-register-2))))
     (setf (integer-register-contents destination-register)
           (ldb (byte 64 0)
-               (ash (sign-extend (integer-register-contents source-register-1))
+               (ash (sign-extend-64 (integer-register-contents source-register-1))
                     shift-amount)))))
 
 (defun execute-or-instruction

@@ -11,4 +11,5 @@
    (:file "integer-register-immediate-double-instructions")
    (:file "memory")
    (:file "load-instructions")
+   (:file "store-instructions")
    (:file "execute-instruction")))

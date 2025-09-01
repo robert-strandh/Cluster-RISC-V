@@ -21,6 +21,13 @@
     (setf (integer-register-contents destination-register)
           (sign-extend-32 value))))
 
+(defun execute-ld-instruction (offset source-register destination-register)
+  (let* ((address (+ (integer-register-contents source-register)
+                     offset))
+         (value (read-double *client* *default-memory* address)))
+    (setf (integer-register-contents destination-register)
+          value)))
+
 (defun execute-load-instruction
     (width offset source-register destination-register)
   (ecase width
@@ -30,7 +37,8 @@
      (execute-lh-instruction offset source-register destination-register))
     (#b010
      (execute-lw-instruction offset source-register destination-register))
-    (#b011)
+    (#b011
+     (execute-ld-instruction offset source-register destination-register))
     (#b100)
     (#b101)
     (#b110)))

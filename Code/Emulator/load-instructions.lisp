@@ -7,6 +7,13 @@
     (setf (integer-register-contents destination-register)
           (sign-extend-8 value))))
 
+(defun execute-lbu-instruction (offset source-register destination-register)
+  (let* ((address (+ (integer-register-contents source-register)
+                     offset))
+         (value (read-byte *client* *default-memory* address)))
+    (setf (integer-register-contents destination-register)
+          value)))
+
 (defun execute-lh-instruction (offset source-register destination-register)
   (let* ((address (+ (integer-register-contents source-register)
                      offset))
@@ -39,6 +46,7 @@
      (execute-lw-instruction offset source-register destination-register))
     (#b011
      (execute-ld-instruction offset source-register destination-register))
-    (#b100)
+    (#b100
+     (execute-lbu-instruction offset source-register destination-register))
     (#b101)
     (#b110)))

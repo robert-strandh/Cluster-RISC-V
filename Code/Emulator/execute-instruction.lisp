@@ -2,6 +2,14 @@
 
 (defun execute-instruction (instruction)
   (ecase (ldb (byte 7 0) instruction)
+    (#b0000011
+     (let ((offset (ldb (byte 12 20) instruction))
+           (width (ldb (byte 3 12) instruction))
+           (source-register (ldb (byte 5 16) instruction))
+           (destination-register (ldb (byte 5 7) instruction)))
+       (execute-load-instruction
+        width offset
+        source-register destination-register)))
     (#b0110011
      (let ((func-7 (ldb (byte 7 25) instruction))
            (func-3 (ldb (byte 3 12) instruction))

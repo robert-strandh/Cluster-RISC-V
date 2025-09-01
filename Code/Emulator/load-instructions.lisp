@@ -36,8 +36,8 @@
           value)))
 
 (defun execute-load-instruction
-    (width offset source-register destination-register)
-  (let ((address (+ (integer-register-contents source-register) offset)))
+    (width offset base-register destination-register)
+  (let ((address (+ (integer-register-contents base-register) offset)))
     (ecase width
       (#b000
        (execute-lb-instruction address destination-register))

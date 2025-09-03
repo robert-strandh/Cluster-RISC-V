@@ -9,6 +9,7 @@
    (:file "utilities")
    (:file "integer-register-register-double-instructions")
    (:file "integer-register-immediate-double-instructions")
+   (:file "branch-instructions")
    (:file "memory")
    (:file "load-instructions")
    (:file "store-instructions")

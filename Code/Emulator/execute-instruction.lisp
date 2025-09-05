@@ -35,4 +35,11 @@
            (destination-register (ldb (byte 5 7) instruction)))
        (execute-integer-register-immediate-instruction
         raw-immediate-value func-3
-        source-register destination-register)))))
+        source-register destination-register)))
+    (#b1100111
+     (let ((offset (sign-extend-12 (ldb (byte 12 20) instruction)))
+           (base-register (ldb (byte 5 16) instruction))
+           (destination-register (ldb (byte 5 7) instruction)))
+       (assert (zerop (ldb (byte 3 12) instruction)))
+       (execute-jalr-instruction
+        offset base-register destination-register)))))

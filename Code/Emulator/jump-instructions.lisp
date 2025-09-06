@@ -1,5 +1,11 @@
 (cl:in-package #:cluster-risc-v-emulator)
 
+(defun execute-jal-instruction (offset destination-register)
+  (let ((new-pc (+ offset *pc*)))
+    (setf (integer-register-contents destination-register)
+          (+ *pc* 4))
+    (setf *pc* new-pc)))
+
 (defun execute-jalr-instruction (offset base-register destination-register)
   (let* ((base (integer-register-contents base-register))
          (new-pc (+ offset base *pc*)))

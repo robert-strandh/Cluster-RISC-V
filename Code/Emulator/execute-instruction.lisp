@@ -42,4 +42,13 @@
            (destination-register (ldb (byte 5 7) instruction)))
        (assert (zerop (ldb (byte 3 12) instruction)))
        (execute-jalr-instruction
-        offset base-register destination-register)))))
+        offset base-register destination-register)))
+    (#b1101111
+     (let* ((raw-offset (logior (ash (ldb (byte 1 31) instruction) 20)
+                                (ash (ldb (byte 8 12) instruction) 12)
+                                (ash (ldb (byte 1 20) instruction) 11)
+                                (ash (ldb (byte 10 21) instruction) 1)))
+            (offset (sign-extend-21 raw-offset))
+            (destination-register (ldb (byte 5 7) instruction)))
+       (execute-jal-instruction
+        offset destination-register)))))

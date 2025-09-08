@@ -17,6 +17,9 @@
 (defun sign-extend-16 (unsigned-byte)
   (sign-extend 16 unsigned-byte))
 
+(defun sign-extend-20 (unsigned-byte)
+  (sign-extend 20 unsigned-byte))
+
 (defun sign-extend-21 (unsigned-byte)
   (sign-extend 21 unsigned-byte))
 

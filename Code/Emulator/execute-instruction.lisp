@@ -54,4 +54,7 @@
         offset destination-register)))
     (#b0110111
      (execute-lui-instruction
+      (ldb (byte 20 12) instruction) (ldb (byte 5 7) instruction)))
+    (#b0010111
+     (execute-auipc-instruction
       (ldb (byte 20 12) instruction) (ldb (byte 5 7) instruction)))))

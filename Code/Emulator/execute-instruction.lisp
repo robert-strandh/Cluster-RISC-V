@@ -51,4 +51,7 @@
             (offset (sign-extend-21 raw-offset))
             (destination-register (ldb (byte 5 7) instruction)))
        (execute-jal-instruction
-        offset destination-register)))))
+        offset destination-register)))
+    (#b0110111
+     (execute-lui-instruction
+      (ldb (byte 20 12) instruction) (ldb (byte 5 7) instruction)))))

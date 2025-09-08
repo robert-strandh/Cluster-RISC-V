@@ -11,6 +11,7 @@
    (:file "integer-register-immediate-double-instructions")
    (:file "branch-instructions")
    (:file "jump-instructions")
+   (:file "upper-instructions")
    (:file "memory")
    (:file "load-instructions")
    (:file "store-instructions")

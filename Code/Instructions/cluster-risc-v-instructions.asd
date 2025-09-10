@@ -8,4 +8,5 @@
    (:file "registers")
    (:file "instruction")
    (:file "integer-register-register-instruction")
-   (:file "integer-register-register-double-instructions")))
+   (:file "integer-register-register-double-instructions")
+   (:file "integer-register-register-word-instructions")))

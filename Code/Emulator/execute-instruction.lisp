@@ -22,7 +22,7 @@
     (#b0110011
      (let ((func-7 (ldb (byte 7 25) instruction))
            (func-3 (ldb (byte 3 12) instruction))
-           (source-register-1 (ldb (byte 5 16) instruction))
+           (source-register-1 (ldb (byte 5 15) instruction))
            (source-register-2 (ldb (byte 5 20) instruction))
            (destination-register (ldb (byte 5 7) instruction)))
        (execute-integer-register-register-instruction

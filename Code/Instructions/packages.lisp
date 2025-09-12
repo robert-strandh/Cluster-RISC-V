@@ -65,4 +65,32 @@
    #:shift-immediate-double-instruction
    #:slli-instruction
    #:slri-instruction
-   #:srai-instruction))
+   #:srai-instruction
+   #:integer-register-immediate-word-instruction
+   #:addiw-instruction
+   #:shift-immediate-word-instruction
+   #:slliw-instruction
+   #:srliw-instruction
+   #:sraiw-instruction
+   #:load-instruction
+   #:ld-instruction
+   #:lw-instruction
+   #:lh-instruction
+   #:lb-instruction
+   #:store-instruction
+   #:sd-instruction
+   #:sw-instruction
+   #:sh-instruction
+   #:sb-instruction
+   #:upper-instruction
+   #:lui-instruction
+   #:auipc-instruction
+   #:branch-instruction
+   #:beq-instruction
+   #:bne-instruction
+   #:blt-instruction
+   #:bge-instruction
+   #:bltu-instruction
+   #:bgeu-instruction
+   #:jal-instruction
+   #:jalr-instruction))

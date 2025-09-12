@@ -109,7 +109,7 @@
 
 (defparameter *s9* *x25*)
 
-(defparameter *saved-register-1* *x25*)
+(defparameter *saved-register-9* *x25*)
 
 (defparameter *s10* *x26*)
 

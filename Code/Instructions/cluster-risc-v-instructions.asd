@@ -17,4 +17,5 @@
    (:file "load-instructions")
    (:file "store-instructions")
    (:file "upper-instructions")
-   (:file "branch-instructions")))
+   (:file "branch-instructions")
+   (:file "jump-instructions")))

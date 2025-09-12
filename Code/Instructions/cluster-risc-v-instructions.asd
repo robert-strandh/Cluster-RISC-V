@@ -16,4 +16,5 @@
    (:file "integer-register-immediate-word-instructions")
    (:file "load-instructions")
    (:file "store-instructions")
-   (:file "upper-instructions")))
+   (:file "upper-instructions")
+   (:file "branch-instructions")))

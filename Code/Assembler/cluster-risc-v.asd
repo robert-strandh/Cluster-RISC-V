@@ -15,6 +15,4 @@
    (:file "store-instructions")
    (:file "upper-instructions")
    (:file "branch-instructions")
-   (:file "jump-instructions")
-   (:file "jal-instruction")
-   (:file "jalr-instruction")))
+   (:file "jump-instructions")))

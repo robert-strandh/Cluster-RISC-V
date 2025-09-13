@@ -8,7 +8,7 @@
    (:file "encode")
    (:file "integer-register-register-instruction")
    (:file "integer-register-register-double-instructions")
-   (:file "integer-register-register-word-instruction")
+   (:file "integer-register-register-word-instructions")
    (:file "addw-instruction")
    (:file "subw-instruction")
    (:file "sllw-instruction")

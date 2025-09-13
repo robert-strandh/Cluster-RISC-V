@@ -1,21 +1,12 @@
 (cl:in-package #:cluster-risc-v)
 
-(defclass upper-instruction (instruction)
-  ((%immediate-value
-    :initarg :immediate-value
-    :reader immediate-value)
-   (%destination-register
-    :initarg :destination-register
-    :reader destination-register)))
-
-(defmethod initialize-instance :after
-    ((instruction upper-instruction)
-     &key immediate-value destination-register)
-  (check-type destination-register integer-register)
-  (check-type immediate-value (signed-byte 32))
-  (assert (zerop (logand immediate-value #.(1- (expt 2 12))))))
-
-(defmethod encode-instruction ((instruction upper-instruction))
-  (logior (immediate-value instruction)
-          (ash (register-number (destination-register instruction)) 7)
+(defmethod encode-instruction ((instruction ins:upper-instruction))
+  (logior (ins:immediate-value instruction)
+          (ash (ins:register-number (ins:destination-register instruction)) 7)
           (opcode instruction)))
+
+(defmethod opcode ((instruction ins:lui-instruction))
+  com:+opcode-lui+)
+
+(defmethod opcode ((instruction ins:auipc-instruction))
+  com:+opcode-auipc+)

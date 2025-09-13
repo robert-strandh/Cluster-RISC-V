@@ -12,7 +12,7 @@
           (ash (ins:register-number (ins:destination-register instruction)) 7)
           (opcode instruction)))
 
-(defmethod func-3 ((instruction insaddi-instruction))
+(defmethod func-3 ((instruction ins:addi-instruction))
   com:+func-3-addi+)
 
 (defmethod func-3 ((instruction ins:slti-instruction))

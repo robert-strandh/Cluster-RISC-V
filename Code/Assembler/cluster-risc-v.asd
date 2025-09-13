@@ -9,7 +9,7 @@
    (:file "integer-register-register-instruction")
    (:file "integer-register-register-double-instructions")
    (:file "integer-register-register-word-instructions")
-   (:file "integer-register-immediate-double-instruction")
+   (:file "integer-register-immediate-double-instructions")
    (:file "non-shift-immediate-double-instruction")
    (:file "addi-instruction")
    (:file "slti-instruction")

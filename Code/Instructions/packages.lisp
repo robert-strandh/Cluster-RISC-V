@@ -64,7 +64,7 @@
    #:xori-instruction
    #:shift-immediate-double-instruction
    #:slli-instruction
-   #:slri-instruction
+   #:srli-instruction
    #:srai-instruction
    #:integer-register-immediate-word-instruction
    #:addiw-instruction
@@ -93,4 +93,12 @@
    #:bltu-instruction
    #:bgeu-instruction
    #:jal-instruction
-   #:jalr-instruction))
+   #:jalr-instruction
+   #:source-register
+   #:source-register-1
+   #:source-register-2
+   #:destination-register
+   #:register-number
+   #:immediate-value
+   #:shift-amount
+   #:offset))

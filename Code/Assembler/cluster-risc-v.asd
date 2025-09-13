@@ -13,7 +13,7 @@
    (:file "integer-register-immediate-word-instructions")
    (:file "load-instructions")
    (:file "store-instructions")
-   (:file "upper-instruction")
+   (:file "upper-instructions")
    (:file "lui-instruction")
    (:file "auipc-instruction")
    (:file "branch-instruction")

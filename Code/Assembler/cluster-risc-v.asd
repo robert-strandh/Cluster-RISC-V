@@ -12,7 +12,7 @@
    (:file "integer-register-immediate-double-instructions")
    (:file "integer-register-immediate-word-instructions")
    (:file "load-instructions")
-   (:file "store-instruction")
+   (:file "store-instructions")
    (:file "sd-instruction")
    (:file "sw-instruction")
    (:file "sh-instruction")

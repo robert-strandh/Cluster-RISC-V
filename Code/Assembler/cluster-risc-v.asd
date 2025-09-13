@@ -9,8 +9,6 @@
    (:file "integer-register-register-instruction")
    (:file "integer-register-register-double-instructions")
    (:file "integer-register-register-word-instructions")
-   (:file "immediate-instruction")
-   (:file "integer-register-immediate-instruction")
    (:file "integer-register-immediate-double-instruction")
    (:file "non-shift-immediate-double-instruction")
    (:file "addi-instruction")

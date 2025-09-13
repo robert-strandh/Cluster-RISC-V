@@ -1,4 +1,4 @@
-(cl:in-package #:cluster-risc-v)
+(cl:in-package #:cluster-risc-v-assembler)
 
 (defmethod opcode ((instruction jal-instruction))
   com:+opcode-jal+)

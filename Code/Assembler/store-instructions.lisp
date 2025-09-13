@@ -1,4 +1,4 @@
-(cl:in-package #:cluster-risc-v)
+(cl:in-package #:cluster-risc-v-assembler)
 
 (defmethod opcode ((instruction store-instruction))
   com:+opcode-store+)

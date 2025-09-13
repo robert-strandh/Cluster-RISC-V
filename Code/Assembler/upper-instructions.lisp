@@ -1,4 +1,4 @@
-(cl:in-package #:cluster-risc-v)
+(cl:in-package #:cluster-risc-v-assembler)
 
 (defmethod encode-instruction ((instruction ins:upper-instruction))
   (logior (ins:immediate-value instruction)

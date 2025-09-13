@@ -1,20 +1,16 @@
 (cl:in-package #:cluster-risc-v)
 
-(defclass store-instruction (instruction)
-  ((%source-register-1
-    :initarg :source-register-1
-    :reader source-register-1)
-   (%source-register-2
-    :initarg :source-register-2
-    :reader source-register-2)
-   (%offset
-    :initarg :offset
-    :reader offset)))
-
-(defmethod initialize-instance :after
-    ((instruction store-instruction)
-     &key offset)
-  (check-type offset (signed-byte 12)))
-
 (defmethod opcode ((instruction store-instruction))
   com:+opcode-store+)
+
+(defmethod width ((instruction ins:sd-instruction))
+  #.(integer-log 8))
+
+(defmethod width ((instruction ins:sw-instruction))
+  #.(integer-log 4))
+
+(defmethod width ((instruction ins:sh-instruction))
+  #.(integer-log 2))
+
+(defmethod width ((instruction ins:sb-instruction))
+  #.(integer-log 1))

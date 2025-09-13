@@ -14,8 +14,6 @@
    (:file "load-instructions")
    (:file "store-instructions")
    (:file "upper-instructions")
-   (:file "lui-instruction")
-   (:file "auipc-instruction")
    (:file "branch-instruction")
    (:file "beq-instruction")
    (:file "bne-instruction")

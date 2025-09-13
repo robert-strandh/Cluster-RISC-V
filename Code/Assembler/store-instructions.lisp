@@ -1,6 +1,6 @@
 (cl:in-package #:cluster-risc-v-assembler)
 
-(defmethod opcode ((instruction store-instruction))
+(defmethod opcode ((instruction ins:store-instruction))
   com:+opcode-store+)
 
 (defmethod width ((instruction ins:sd-instruction))

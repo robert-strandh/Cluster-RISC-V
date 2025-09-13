@@ -2,11 +2,12 @@
 
 (defgeneric width (instruction))
 
-(defmethod opcode ((instruction load-instruction))
+(defmethod opcode ((instruction ins:load-instruction))
   com:+opcode-load+)
 
-(defun integer-log (n)
-  (integer-length (1- n)))
+(eval-when (:compile-toplevel :load-toplevel :execute)
+  (defun integer-log (n)
+    (integer-length (1- n))))
 
 (defmethod encode-instruction ((instruction ins:load-instruction))
   (logior (ash (logand (ins:offset instruction) #b111111111111) 20)

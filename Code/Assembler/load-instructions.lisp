@@ -2,31 +2,27 @@
 
 (defgeneric width (instruction))
 
-(defclass load-instruction (instruction)
-  ((%source-register
-    :initarg :source-register
-    :reader source-register)
-   (%destination-register
-    :initarg :destination-register
-    :reader destination-register)
-   (%offset
-    :initarg :offset
-    :reader offset)))
-
-(defmethod initialize-instance :after
-    ((instruction load-instruction)
-     &key offset)
-  (check-type offset (signed-byte 12)))
-
 (defmethod opcode ((instruction load-instruction))
   com:+opcode-load+)
 
 (defun integer-log (n)
   (integer-length (1- n)))
 
-(defmethod encode-instruction ((instruction load-instruction))
-  (logior (ash (logand (offset instruction) #b111111111111) 20)
-          (ash (register-number (source-register instruction)) 15)
+(defmethod encode-instruction ((instruction ins:load-instruction))
+  (logior (ash (logand (ins:offset instruction) #b111111111111) 20)
+          (ash (ins:register-number (ins:source-register instruction)) 15)
           (ash (width instruction) 12)
-          (ash (register-number (destination-register instruction)) 7)
+          (ash (ins:register-number (ins:destination-register instruction)) 7)
           (opcode instruction)))
+
+(defmethod width ((instruction ins:ld-instruction))
+  #.(integer-log 8))
+
+(defmethod width ((instruction ins:lw-instruction))
+  #.(integer-log 4))
+
+(defmethod width ((instruction ins:lh-instruction))
+  #.(integer-log 2))
+  
+(defmethod width ((instruction ins:lb-instruction))
+  #.(integer-log 1))

@@ -10,7 +10,7 @@
    (:file "integer-register-register-double-instructions")
    (:file "integer-register-register-word-instructions")
    (:file "integer-register-immediate-double-instructions")
-   (:file "integer-register-immediate-word-instruction")
+   (:file "integer-register-immediate-word-instructions")
    (:file "addiw-instruction")
    (:file "shift-immediate-word-instruction")
    (:file "slliw-instruction")

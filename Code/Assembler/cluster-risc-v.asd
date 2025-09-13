@@ -11,7 +11,7 @@
    (:file "integer-register-register-word-instructions")
    (:file "integer-register-immediate-double-instructions")
    (:file "integer-register-immediate-word-instructions")
-   (:file "load-instruction")
+   (:file "load-instructions")
    (:file "ld-instruction")
    (:file "lw-instruction")
    (:file "lh-instruction")

@@ -1,6 +1,6 @@
 (cl:in-package #:asdf-user)
 
-(defsystem "cluster-risc-v"
+(defsystem "cluster-risc-v-assembler"
   :depends-on ("cluster-risc-v-common" "cluster-risc-v-instructions")
   :serial t
   :components

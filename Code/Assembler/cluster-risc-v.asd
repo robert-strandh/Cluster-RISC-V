@@ -7,7 +7,7 @@
   ((:file "packages")
    (:file "encode")
    (:file "integer-register-register-instruction")
-   (:file "integer-register-register-double-instruction")
+   (:file "integer-register-register-double-instructions")
    (:file "add-instruction")
    (:file "sub-instruction")
    (:file "sll-instruction")

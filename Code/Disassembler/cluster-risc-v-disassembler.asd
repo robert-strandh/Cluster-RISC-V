@@ -4,4 +4,5 @@
   :depends-on ("cluster-risc-v-common" "cluster-risc-v-instructions")
   :serial t
   :components
-  ((:file "packages")))
+  ((:file "packages")
+   (:file "registers")))

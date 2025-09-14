@@ -8,3 +8,6 @@
          for name = (format nil "*X~d*" i)
          for symbol = (intern name (find-package '#:ins))
          collect (symbol-value symbol))))
+
+(defun integer-register (register-number)
+  (aref *integer-registers* register-number))

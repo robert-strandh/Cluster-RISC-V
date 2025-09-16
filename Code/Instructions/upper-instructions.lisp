@@ -15,13 +15,8 @@
   (check-type immediate-value (signed-byte 32))
   (assert (zerop (logand immediate-value #.(1- (expt 2 12))))))
 
-(defclass lui-instruction (instruction)
-  ((%immediate-value
-    :initarg :immediate-value
-    :reader immediate-value)
-   (%destination-register
-    :initarg :destination-register
-    :reader destination-register)))
+(defclass lui-instruction (upper-instruction)
+  ())
 
 (defclass auipc-instruction (upper-instruction)
   ())

@@ -32,3 +32,12 @@
             (ldb (byte 64 0)
                  (ash (integer-register-contents source-register-1)
                       shift-amount))))))
+
+(defmethod execute-instruction ((instruction ins:slt-instruction))
+  (with-three-registers instruction
+    (setf (integer-register-contents destination-register)
+          (if (< (sign-extend-64
+                  (integer-register-contents source-register-1))
+                 (sign-extend-64
+                  (integer-register-contents source-register-2)))
+              1 0))))

@@ -41,3 +41,10 @@
                  (sign-extend-64
                   (integer-register-contents source-register-2)))
               1 0))))
+
+(defmethod execute-instruction ((instruction ins:sltu-instruction))
+  (with-three-registers instruction
+    (setf (integer-register-contents destination-register)
+          (if (< (integer-register-contents source-register-1)
+                 (integer-register-contents source-register-2))
+              1 0))))

@@ -79,3 +79,9 @@
     (setf (integer-register-contents destination-register)
           (logior (integer-register-contents source-register-1)
                   (integer-register-contents source-register-2)))))
+
+(defmethod execute-instruction ((instruction ins:and-instruction))
+  (with-three-registers instruction
+    (setf (integer-register-contents destination-register)
+          (logand (integer-register-contents source-register-1)
+                  (integer-register-contents source-register-2)))))

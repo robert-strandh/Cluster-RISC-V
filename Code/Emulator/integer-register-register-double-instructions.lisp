@@ -73,3 +73,9 @@
                  (ash (sign-extend-64
                        (integer-register-contents source-register-1))
                       shift-amount))))))
+
+(defmethod execute-instruction ((instruction ins:or-instruction))
+  (with-three-registers instruction
+    (setf (integer-register-contents destination-register)
+          (logior (integer-register-contents source-register-1)
+                  (integer-register-contents source-register-2)))))

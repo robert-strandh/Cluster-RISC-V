@@ -48,3 +48,9 @@
           (if (< (integer-register-contents source-register-1)
                  (integer-register-contents source-register-2))
               1 0))))
+
+(defmethod execute-instruction ((instruction ins:xor-instruction))
+  (with-three-registers instruction
+    (setf (integer-register-contents destination-register)
+          (logxor (integer-register-contents source-register-1)
+                  (integer-register-contents source-register-2)))))

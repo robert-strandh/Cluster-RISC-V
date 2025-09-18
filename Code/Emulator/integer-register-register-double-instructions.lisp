@@ -63,3 +63,13 @@
             (ldb (byte 64 0)
                  (ash (integer-register-contents source-register-1)
                       shift-amount))))))
+
+(defmethod execute-instruction ((instruction ins:sra-instruction))
+  (with-three-registers instruction
+    (let ((shift-amount
+            (ldb (byte 6 0) (integer-register-contents source-register-2))))
+      (setf (integer-register-contents destination-register)
+            (ldb (byte 64 0)
+                 (ash (sign-extend-64
+                       (integer-register-contents source-register-1))
+                      shift-amount))))))

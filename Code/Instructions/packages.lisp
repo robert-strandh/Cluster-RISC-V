@@ -101,4 +101,5 @@
    #:register-number
    #:immediate-value
    #:shift-amount
-   #:offset))
+   #:offset
+   #:target))

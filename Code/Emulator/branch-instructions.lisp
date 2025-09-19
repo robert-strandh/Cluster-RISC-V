@@ -7,3 +7,8 @@
           (source-register-2 (ins:source-register-2 ,instruction))
           (value-2 (integer-register-contents source-register-2)))
      ,@body))
+
+(defmethod excute-instruction ((instruction ins:beq-instruction))
+  (with-target-and-source-register-values instruction
+    (when (= value-1 value-2)
+      (setf *pc* target))))

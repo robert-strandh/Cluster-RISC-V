@@ -12,3 +12,8 @@
   (with-target-and-source-register-values instruction
     (when (= value-1 value-2)
       (setf *pc* target))))
+
+(defmethod excute-instruction ((instruction ins:bne-instruction))
+  (with-target-and-source-register-values instruction
+    (unless (= value-1 value-2)
+      (setf *pc* target))))

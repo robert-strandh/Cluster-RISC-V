@@ -3,9 +3,20 @@
 (defmacro with-target-and-register-values (instruction &body body)
   `(let* ((target (ins:target instruction))
           (source-register-1 (ins:source-register-1 ,instruction))
-         (value-1 (integer-register-contents source-register-1))
+          (value-1 (integer-register-contents source-register-1))
           (source-register-2 (ins:source-register-2 ,instruction))
           (value-2 (integer-register-contents source-register-2)))
+     ,@body))
+
+(defmacro with-target-and-sign-extended-register-values
+    (instruction &body body)
+  `(let* ((target (ins:target instruction))
+          (source-register-1 (ins:source-register-1 ,instruction))
+          (value-1 (integer-register-contents source-register-1))
+          (value-1 (sign-extend-64 value-1))
+          (source-register-2 (ins:source-register-2 ,instruction))
+          (value-2 (integer-register-contents source-register-2))
+          (value-2 (sign-extend-64 value-2)))
      ,@body))
 
 (defmethod excute-instruction ((instruction ins:beq-instruction))

@@ -28,3 +28,8 @@
   (with-target-and-register-values instruction
     (unless (= value-1 value-2)
       (setf *pc* target))))
+
+(defmethod excute-instruction ((instruction ins:blt-instruction))
+  (with-target-and-sign-extended-register-values instruction
+    (when (< value-1 value-2)
+      (setf *pc* target))))

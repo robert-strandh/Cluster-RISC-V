@@ -46,3 +46,11 @@
                (+ immediate-value
                   (sign-extend-64
                    (integer-register-contents source-register)))))))
+
+(defmethod execute-instruction ((instruction ins:slti-instruction))
+  (with-sign-extended-immediate-value-and-registers instruction
+    (setf (integer-register-contents destination-register)
+          (if (< immediate-value
+                 (sign-extend-64
+                  (integer-register-contents source-register)))
+              1 0))))

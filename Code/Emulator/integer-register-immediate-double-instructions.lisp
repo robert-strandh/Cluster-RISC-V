@@ -5,3 +5,10 @@
          (source-register (ins:source-register ,instruction))
          (destination-register (ins:destination-register ,instruction)))
      ,@body))
+
+(defmethod execute-instruction ((instruction ins:sltiu-instruction))
+  (with-raw-immediate-value-and-registers instruction
+    (setf (integer-register-contents destination-register)
+          (if (< immediate-value
+                 (integer-register-contents source-register))
+              1 0))))

@@ -13,7 +13,13 @@
                  (integer-register-contents source-register))
               1 0))))
 
-(defmethod execute-instruction ((instruction ins:sltiu-instruction))
+(defmethod execute-instruction ((instruction ins:ori-instruction))
+  (with-raw-immediate-value-and-registers instruction
+    (setf (integer-register-contents destination-register)
+          (logior immediate-value
+                  (integer-register-contents source-register)))))
+
+(defmethod execute-instruction ((instruction ins:xori-instruction))
   (with-raw-immediate-value-and-registers instruction
     (setf (integer-register-contents destination-register)
           (logxor immediate-value

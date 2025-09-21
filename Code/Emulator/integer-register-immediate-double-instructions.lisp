@@ -74,3 +74,11 @@
     (setf (integer-register-contents destination-register)
           (ash (integer-register-contents source-register)
                (- shift-amount)))))
+
+(defmethod execute-instruction ((instruction ins:srai-instruction))
+  (with-shift-amount-and-registers instruction
+    (setf (integer-register-contents destination-register)
+          (ldb (byte 64 0)
+               (ash (sign-extend-64
+                     (integer-register-contents source-register))
+                    (- shift-amount))))))

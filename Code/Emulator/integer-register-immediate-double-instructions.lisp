@@ -12,3 +12,9 @@
           (if (< immediate-value
                  (integer-register-contents source-register))
               1 0))))
+
+(defmethod execute-instruction ((instruction ins:sltiu-instruction))
+  (with-raw-immediate-value-and-registers instruction
+    (setf (integer-register-contents destination-register)
+          (logxor immediate-value
+                  (integer-register-contents source-register)))))

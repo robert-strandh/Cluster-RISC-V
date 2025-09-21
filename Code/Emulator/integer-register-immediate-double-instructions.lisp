@@ -33,8 +33,16 @@
           (logxor immediate-value
                   (integer-register-contents source-register)))))
 
-(defmethod execute-instruction ((instruction ins:ori-instruction))
+(defmethod execute-instruction ((instruction ins:andi-instruction))
   (with-raw-immediate-value-and-registers instruction
     (setf (integer-register-contents destination-register)
           (logand immediate-value
                   (integer-register-contents source-register)))))
+
+(defmethod execute-instruction ((instruction ins:addi-instruction))
+  (with-sign-extended-immediate-value-and-registers instruction
+    (setf (integer-register-contents destination-register)
+          (ldb (byte 64 0)
+               (+ immediate-value
+                  (sign-extend-64
+                   (integer-register-contents source-register)))))))

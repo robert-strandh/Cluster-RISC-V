@@ -24,3 +24,9 @@
     (setf (integer-register-contents destination-register)
           (logxor immediate-value
                   (integer-register-contents source-register)))))
+
+(defmethod execute-instruction ((instruction ins:ori-instruction))
+  (with-raw-immediate-value-and-registers instruction
+    (setf (integer-register-contents destination-register)
+          (logand immediate-value
+                  (integer-register-contents source-register)))))

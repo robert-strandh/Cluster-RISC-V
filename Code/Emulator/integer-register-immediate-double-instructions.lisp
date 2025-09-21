@@ -6,6 +6,14 @@
          (destination-register (ins:destination-register ,instruction)))
      ,@body))
 
+(defmacro with-sign-extended-immediate-value-and-registers
+    (instruction &body body)
+  `(let* ((immediate-value (ins:immediate-value ,instruction))
+          (immediate-value (sign-extend-12 immediate-value))
+          (source-register (ins:source-register ,instruction))
+          (destination-register (ins:destination-register ,instruction)))
+     ,@body))
+
 (defmethod execute-instruction ((instruction ins:sltiu-instruction))
   (with-raw-immediate-value-and-registers instruction
     (setf (integer-register-contents destination-register)

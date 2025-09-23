@@ -67,7 +67,7 @@
     (setf (integer-register-contents destination-register)
           (ldb (byte 64 0)
                (ash (integer-register-contents source-register)
-                    shift-amount))))))
+                    shift-amount)))))
 
 (defmethod execute-instruction ((instruction ins:srli-instruction))
   (with-shift-amount-and-registers instruction

@@ -7,4 +7,4 @@
 (defun execute-auipc-instruction (raw-immediate-value destination-register)
   (setf (integer-register-contents destination-register)
         (+ (ash (sign-extend-20 raw-immediate-value) 12)
-           *pc*)))
+           (instruction-address *pc*))))
